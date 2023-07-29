@@ -10,15 +10,10 @@ body {
   left: 0;
   width: 100%;
   background-color: #fff; /* Set header background to white */
-  color: #FFA500; /* Set text color to theme color */
+  color: #50C878; /* Set text color to theme color */
   padding: 10px;
   z-index: 100;
   /* Add any other styles for the header container here */
-}
-
-.main-container {
-  padding-top: 60px; /* Add padding to create space for the header */
-  /* Add any other styles for the main container here */
 }
 
 .flex-container {
@@ -28,37 +23,31 @@ body {
 
 .flex-group {
   display: flex;
-  align-items: center;
+  /* align-items: center; */
+  justify-content: space-between;
 }
 
 .agent-directory-item {
   position: relative;
-  color: #FFA500; /* Theme color for text */
+  color: #50C878; /* Theme color for text */
   text-decoration: none;
   padding: 8px 16px;
   border-bottom: 2px solid transparent; /* Add a transparent border-bottom for the link */
-
-  /* Set up the link to look like a search input with a search icon */
-  /* background-image: url("/path/to/search-icon.png"); Replace with the path to your search icon image */
   background-repeat: no-repeat;
   background-position: right center; /* Adjust the position of the search icon */
   background-size: 20px; /* Adjust the size of the search icon */
 }
 
 .agent-directory-item:hover {
-  border-bottom-color: #FFA500; /* Show a subtle border-bottom color on hover */
+  border-bottom-color: #50C878; /* Show a subtle border-bottom color on hover */
 }
 
 .header-text {
-  color: #FFA500; /* Set text color to theme color */
+  color: #50C878; /* Set text color to theme color */
   font-size: 24px; /* Adjust font size as needed */
   font-weight: bolder; /* Optionally set font weight */
   text-decoration: none; /* Remove underline from the link */
   /* Add any other styles for the header text here */
-}
-.header-logo {
-  max-width: 100px;
-  /* Add any other styles for the logo here */
 }
 
 /* User Menu Styles */
@@ -121,12 +110,10 @@ body {
   margin-bottom: 5px;
 }
 
-/* Add any other styles for the rightNavDrawer here */
-
 /* Additional Styles for Buttons */
 .btn-link {
   background-color: #fff; /* Set button background to white */
-  color: #FFA500; /* Theme color for text */
+  color: #50C878; /* Theme color for text */
   padding: 5px 10px;
   border-radius: 4px;
   border: none;
@@ -134,83 +121,66 @@ body {
 }
 
 .btn-link:hover {
-  background-color: #FFA500; /* Theme color for background on hover */
+  background-color: #50C878; /* Theme color for background on hover */
   color: #fff; /* Set text color to white on hover */
 }
 
 /* Media Queries for Responsiveness */
-
 /* For screen sizes less than or equal to 768px */
 @media (max-width: 768px) {
   .header-text {
     font-size: 20px; /* Reduce font size for smaller screens */
   }
 
-  .header-logo {
-    max-width: 80px; /* Adjust logo size for smaller screens */
+  .logo-item {
+    /* Adjust logo size for smaller screens */
+    max-width: 80px;
+    /* margin-right: auto; Push the logo to the left */
   }
-  
+
+  .search-container {
+    /* Adjust search container width for smaller screens */
+    width: 100%;
+    max-width: 200px;
+  }
+
+  .agent-directory-item {
+    display: none; /* Hide the agent-directory-item on smaller screens */
+  }
+
   .nav-ul {
     flex-direction: column; /* Stack the user menu items vertically */
   }
-  
+
   .user-menu-item {
     margin-bottom: 10px; /* Add spacing between user menu items */
   }
 
-  /* Add any other specific styles for smaller screens here */
-}
-
-/* Add more media queries and adjust styles as needed for other screen sizes */
-/* Media Queries for Responsiveness */
-
-/* For screen sizes less than or equal to 768px */
-@media (max-width: 768px) {
-  .header-text {
-    font-size: 20px; /* Reduce font size for smaller screens */
-  }
-
-  .header-logo {
-    max-width: 80px; /* Adjust logo size for smaller screens */
-  }
-  
-  .nav-ul {
-    flex-direction: column; /* Stack the user menu items vertically */
-  }
-  
+  /* Show the button and dropdown menu on mobile */
   .user-menu-item {
-    margin-bottom: 10px; /* Add spacing between user menu items */
+    display: flex;
+    justify-content: space-between; /* Align the button and icon to the extremes */
+    flex-grow: 1;
+  }
+  .flex-mobile{
+    display: flex;
+    justify-content: space-between; /* Align the button and icon to the extremes */
+    /* flex-grow: 1; */
   }
 
-  /* Add any other specific styles for smaller screens here */
-
-  /* Main Container Styles */
-  .main-container {
-    padding-top: 120px; /* Increase padding to create space for the header and user menu */
-    padding-bottom: 60px; /* Add padding at the bottom for the footer */
+  .rightNavDrawer {
+    display: block;
+    position: relative;
   }
 
-  /* Footer Styles */
-  .footer {
-    background-color: #333; /* Dark background color for the footer */
-    color: #fff; /* Text color for the footer */
-    padding: 20px;
-    text-align: center;
+  /* Show the logo on mobile */
+  .logo-item {
+    display: flex;
+    align-items: center;
   }
 
-  .footer p {
-    margin: 0; /* Reset margin for paragraphs inside the footer */
+  /* Hide other navigation elements on mobile */
+  .search-container {
+    display: none;
   }
-
-  /* Add any other styles for the footer as needed */
-
-  /* Realtor Info Box Styles */
-  .realtor-info-box {
-    position: static; /* Reset position for the realtor info box */
-    width: 100%; /* Adjust width for smaller screens */
-    max-width: 100%; /* Make sure it doesn't exceed the screen width */
-    margin-top: 20px; /* Add margin at the top to separate from the content */
-  }
-
-  /* Add any other styles for the realtor info box as needed */
 }
