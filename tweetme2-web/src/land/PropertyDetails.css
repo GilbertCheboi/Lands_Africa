@@ -1,0 +1,154 @@
+/* PropertyDetails.css */
+
+/* Styling for the main content */
+.main-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-gap: 20px;
+}
+
+/* Property Info - Price and Icons */
+.property-info-price-and-icons {
+  display: flex;
+  align-items: center;
+}
+
+.property-info-price {
+  font-size: 24px;
+  font-weight: bold;
+  color: #007bff; /* Theme color for the price */
+  margin-right: 10px;
+}
+
+/* Property Info - Features */
+.property-info-features {
+  margin-top: 10px;
+}
+
+.property-info-feature {
+  display: inline-flex;
+  align-items: center;
+}
+
+.property-info-feature-detail {
+  font-weight: bold;
+  margin-right: 5px;
+}
+
+/* Property Info - Address */
+.property-info-address-main {
+  font-size: 28px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.property-info-address-citystatezip {
+  font-size: 16px;
+  color: #6c757d;
+  margin: 5px 0;
+}
+
+.property-info-neighborhood {
+  font-size: 16px;
+  color: #6c757d;
+}
+
+.divider {
+  margin: 0 5px;
+  color: #6c757d;
+}
+
+/* Agent Information */
+.agent-information-container {
+  font-size: 16px;
+  color: #333;
+  margin-top: 10px;
+}
+
+.agent-information-fullname {
+  font-weight: bold;
+  color: #007bff; /* Theme color for the agent's name */
+}
+
+.agent-information-agency-name,
+.agent-information-license-number {
+  color: #6c757d;
+}
+
+.agent-information-phone-number {
+  color: #007bff; /* Theme color for the phone number */
+}
+
+.agent-information-email {
+  color: #007bff; /* Theme color for the email */
+}
+
+/* About This Home */
+.ldp-description-container {
+  margin-top: 20px;
+}
+
+.ldp-description-heading {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.ldp-description-text-container {
+  margin-top: 10px;
+}
+
+.ldp-description-text {
+  font-size: 16px;
+  line-height: 1.5;
+  color: #333;
+}
+
+/* "See All" Button */
+.js-see-all-btn {
+  background-color: transparent;
+  border: none;
+  color: #007bff; /* Theme color for the button */
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 10px;
+  text-decoration: underline;
+}
+
+/* Agent Information Section */
+.agent-information-section {
+  margin-top: 20px;
+}
+
+.listing-agent-title {
+  font-size: 20px;
+  font-weight: bold;
+  color: #333;
+}
+
+/* Realtor Info Box */
+.realtor-info-box {
+  position: fixed;
+  top: 3.75rem; /* Adjust this value to position the box vertically */
+  right: 50px; /* Adjust this value to position the box horizontally */
+  width: 30%; /* Adjust the width of the box as needed */
+  padding: 20px;
+  margin-top: 100px;
+  background-color: #f0f0f0;
+  /* Add your styles for realtor information box here */
+}
+
+.agent-avatar img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.agent-name {
+  font-weight: bold;
+}
+/* Rest of the styling for other sections and elements as needed */

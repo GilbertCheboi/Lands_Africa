@@ -1,0 +1,216 @@
+/* Global Styles */
+body {
+  margin: 0; /* Reset body margin to remove default spacing */
+}
+
+/* Header Styles */
+.header-primary {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #fff; /* Set header background to white */
+  color: #FFA500; /* Set text color to theme color */
+  padding: 10px;
+  z-index: 100;
+  /* Add any other styles for the header container here */
+}
+
+.main-container {
+  padding-top: 60px; /* Add padding to create space for the header */
+  /* Add any other styles for the main container here */
+}
+
+.flex-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.flex-group {
+  display: flex;
+  align-items: center;
+}
+
+.agent-directory-item {
+  position: relative;
+  color: #FFA500; /* Theme color for text */
+  text-decoration: none;
+  padding: 8px 16px;
+  border-bottom: 2px solid transparent; /* Add a transparent border-bottom for the link */
+
+  /* Set up the link to look like a search input with a search icon */
+  /* background-image: url("/path/to/search-icon.png"); Replace with the path to your search icon image */
+  background-repeat: no-repeat;
+  background-position: right center; /* Adjust the position of the search icon */
+  background-size: 20px; /* Adjust the size of the search icon */
+}
+
+.agent-directory-item:hover {
+  border-bottom-color: #FFA500; /* Show a subtle border-bottom color on hover */
+}
+
+.header-text {
+  color: #FFA500; /* Set text color to theme color */
+  font-size: 24px; /* Adjust font size as needed */
+  font-weight: bolder; /* Optionally set font weight */
+  text-decoration: none; /* Remove underline from the link */
+  /* Add any other styles for the header text here */
+}
+.header-logo {
+  max-width: 100px;
+  /* Add any other styles for the logo here */
+}
+
+/* User Menu Styles */
+.nav-ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+.user-menu-item {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+}
+
+.user-menu-item:focus {
+  outline: none;
+}
+
+.photo-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #ccc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 10px;
+  /* Add any other styles for the user photo icon here */
+}
+
+.rightNavDrawer {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 1;
+  display: none; /* Hide the drawer by default */
+}
+
+.show {
+  display: block; /* Show the drawer when the "show" class is applied */
+}
+
+.drawer-menu-list {
+  padding: 10px;
+  list-style: none;
+  margin: 0;
+}
+
+.drawer-menu-list li {
+  margin-bottom: 5px;
+}
+
+/* Add any other styles for the rightNavDrawer here */
+
+/* Additional Styles for Buttons */
+.btn-link {
+  background-color: #fff; /* Set button background to white */
+  color: #FFA500; /* Theme color for text */
+  padding: 5px 10px;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-link:hover {
+  background-color: #FFA500; /* Theme color for background on hover */
+  color: #fff; /* Set text color to white on hover */
+}
+
+/* Media Queries for Responsiveness */
+
+/* For screen sizes less than or equal to 768px */
+@media (max-width: 768px) {
+  .header-text {
+    font-size: 20px; /* Reduce font size for smaller screens */
+  }
+
+  .header-logo {
+    max-width: 80px; /* Adjust logo size for smaller screens */
+  }
+  
+  .nav-ul {
+    flex-direction: column; /* Stack the user menu items vertically */
+  }
+  
+  .user-menu-item {
+    margin-bottom: 10px; /* Add spacing between user menu items */
+  }
+
+  /* Add any other specific styles for smaller screens here */
+}
+
+/* Add more media queries and adjust styles as needed for other screen sizes */
+/* Media Queries for Responsiveness */
+
+/* For screen sizes less than or equal to 768px */
+@media (max-width: 768px) {
+  .header-text {
+    font-size: 20px; /* Reduce font size for smaller screens */
+  }
+
+  .header-logo {
+    max-width: 80px; /* Adjust logo size for smaller screens */
+  }
+  
+  .nav-ul {
+    flex-direction: column; /* Stack the user menu items vertically */
+  }
+  
+  .user-menu-item {
+    margin-bottom: 10px; /* Add spacing between user menu items */
+  }
+
+  /* Add any other specific styles for smaller screens here */
+
+  /* Main Container Styles */
+  .main-container {
+    padding-top: 120px; /* Increase padding to create space for the header and user menu */
+    padding-bottom: 60px; /* Add padding at the bottom for the footer */
+  }
+
+  /* Footer Styles */
+  .footer {
+    background-color: #333; /* Dark background color for the footer */
+    color: #fff; /* Text color for the footer */
+    padding: 20px;
+    text-align: center;
+  }
+
+  .footer p {
+    margin: 0; /* Reset margin for paragraphs inside the footer */
+  }
+
+  /* Add any other styles for the footer as needed */
+
+  /* Realtor Info Box Styles */
+  .realtor-info-box {
+    position: static; /* Reset position for the realtor info box */
+    width: 100%; /* Adjust width for smaller screens */
+    max-width: 100%; /* Make sure it doesn't exceed the screen width */
+    margin-top: 20px; /* Add margin at the top to separate from the content */
+  }
+
+  /* Add any other styles for the realtor info box as needed */
+}
