@@ -10,7 +10,7 @@ body {
   left: 0;
   width: 100%;
   background-color: #fff; /* Set header background to white */
-  color: #50C878; /* Set text color to theme color */
+  color: #FFA500; /* Set text color to theme color */
   padding: 10px;
   z-index: 100;
   /* Add any other styles for the header container here */
@@ -29,7 +29,7 @@ body {
 
 .agent-directory-item {
   position: relative;
-  color: #50C878; /* Theme color for text */
+  color: #FFA500; /* Theme color for text */
   text-decoration: none;
   padding: 8px 16px;
   border-bottom: 2px solid transparent; /* Add a transparent border-bottom for the link */
@@ -39,11 +39,11 @@ body {
 }
 
 .agent-directory-item:hover {
-  border-bottom-color: #50C878; /* Show a subtle border-bottom color on hover */
+  border-bottom-color: #FFA500; /* Show a subtle border-bottom color on hover */
 }
 
 .header-text {
-  color: #50C878; /* Set text color to theme color */
+  color: #FFA500; /* Set text color to theme color */
   font-size: 24px; /* Adjust font size as needed */
   font-weight: bolder; /* Optionally set font weight */
   text-decoration: none; /* Remove underline from the link */
@@ -113,7 +113,7 @@ body {
 /* Additional Styles for Buttons */
 .btn-link {
   background-color: #fff; /* Set button background to white */
-  color: #50C878; /* Theme color for text */
+  color: #FFA500; /* Theme color for text */
   padding: 5px 10px;
   border-radius: 4px;
   border: none;
@@ -121,7 +121,7 @@ body {
 }
 
 .btn-link:hover {
-  background-color: #50C878; /* Theme color for background on hover */
+  background-color: #FFA500; /* Theme color for background on hover */
   color: #fff; /* Set text color to white on hover */
 }
 

@@ -90,13 +90,13 @@ const Header = () => {
 
                 <li className="auth-item-header">
                   <button className="btn-link" onClick={handleLinkRegister}>
-                    <a href="/Register/" id="Contact" title="Contact">
+                    <a href="/register/" id="Contact" title="Contact">
                       Register
                     </a>
                   </button>{" "}
                   <span>/</span>
                   <button className="btn-link" onClick={handleLinkSign}>
-                    <a href="/Login/" id="Contact" title="Contact">
+                    <a href="/login/" id="Contact" title="Contact">
                       Sign
                     </a>
                   </button>
@@ -153,13 +153,13 @@ const Header = () => {
 
                 <li className="auth-item-header">
                   <button className="btn-link" onClick={handleLinkRegister}>
-                    <a href="/Register/" id="Contact" title="Contact">
+                    <a href="/register/" id="Contact" title="Contact">
                       Register
                     </a>
                   </button>{" "}
                   <span>/</span>
                   <button className="btn-link" onClick={handleLinkSign}>
-                    <a href="/Login/" id="Contact" title="Contact">
+                    <a href="/login/" id="Contact" title="Contact">
                       Sign
                     </a>
                   </button>

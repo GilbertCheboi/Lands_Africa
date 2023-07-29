@@ -36,6 +36,7 @@ export function  Login () {
       if (response.ok) {
         const data = await response.json();
         console.log('Login successful!', data);
+        window.location.href = '/'
         // Handle successful login, e.g., store user data in the state or redirect to another page
       } else {
         console.error('Failed to login:', response.status);
@@ -53,7 +54,7 @@ export function  Login () {
     <Header />
     <div style={{ backgroundColor: 'white', marginTop: '100px', marginBottom: '100px', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
   <form onSubmit={handleLogin} style={{ backgroundColor: 'white', padding: '30px', borderRadius: '10px', boxShadow: '0 0 10px rgba(0, 0, 0, 0.2)', maxWidth: '400px', width: '90%' }}>
-    <h2 style={{ textAlign: 'center', marginBottom: '30px', color: '#50C878', fontSize: '24px' }}>Login</h2>
+    <h2 style={{ textAlign: 'center', marginBottom: '30px', color: '#FFA500', fontSize: '24px' }}>Login</h2>
     <div style={{ marginBottom: '20px' }}>
       <label htmlFor="username" style={{ color: '#555', fontSize: '16px' }}>Username:</label>
       <input
@@ -87,7 +88,7 @@ export function  Login () {
       />
     </div>
 
-    <button type="submit" style={{ backgroundColor: '#50C878', color: 'white', border: 'none', padding: '10px 20px', borderRadius: '5px', cursor: 'pointer', width: '100%', fontSize: '16px' }}>
+    <button type="submit" style={{ backgroundColor: '#FFA500', color: 'white', border: 'none', padding: '10px 20px', borderRadius: '5px', cursor: 'pointer', width: '100%', fontSize: '16px' }}>
           Login
         </button>
   </form>
