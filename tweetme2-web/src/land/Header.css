@@ -1,186 +1,230 @@
-/* Global Styles */
-body {
-  margin: 0; /* Reset body margin to remove default spacing */
-}
-
-/* Header Styles */
-.header-primary {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  background-color: #fff; /* Set header background to white */
-  color: #FFA500; /* Set text color to theme color */
-  padding: 10px;
-  z-index: 100;
-  /* Add any other styles for the header container here */
-}
-
-.flex-container {
+nav {
+  background: #171c24;
   display: flex;
+  flex-wrap: wrap;
+  align-items: center;
   justify-content: space-between;
+  height: 70px;
+  padding: 0 100px;
 }
 
-.flex-group {
+nav .logo {
+  color: #fff;
+  font-size: 30px;
+  font-weight: 600;
+  letter-spacing: -1px;
+}
+
+nav .nav-items {
   display: flex;
-  /* align-items: center; */
-  justify-content: space-between;
+  flex: 1;
+  padding: 0 0 0 40px;
 }
 
-.agent-directory-item {
-  position: relative;
-  color: #FFA500; /* Theme color for text */
+nav .nav-items li {
+  list-style: none;
+  padding: 0 15px;
+}
+
+nav .nav-items li a {
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
   text-decoration: none;
-  padding: 8px 16px;
-  border-bottom: 2px solid transparent; /* Add a transparent border-bottom for the link */
-  background-repeat: no-repeat;
-  background-position: right center; /* Adjust the position of the search icon */
-  background-size: 20px; /* Adjust the size of the search icon */
 }
 
-.agent-directory-item:hover {
-  border-bottom-color: #FFA500; /* Show a subtle border-bottom color on hover */
+nav .nav-items li a:hover {
+  color: #ffa500;
 }
 
-.header-text {
-  color: #FFA500; /* Set text color to theme color */
-  font-size: 24px; /* Adjust font size as needed */
-  font-weight: bolder; /* Optionally set font weight */
-  text-decoration: none; /* Remove underline from the link */
-  /* Add any other styles for the header text here */
-}
-
-/* User Menu Styles */
-.nav-ul {
-  list-style: none;
+nav form {
   display: flex;
-  align-items: center;
-  margin: 0;
-  padding: 0;
-}
-
-.user-menu-item {
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
-  padding: 5px;
-  display: flex;
-  align-items: center;
-}
-
-.user-menu-item:focus {
-  outline: none;
-}
-
-.photo-icon {
-  width: 40px;
   height: 40px;
-  border-radius: 50%;
-  background-color: #ccc;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-right: 10px;
-  /* Add any other styles for the user photo icon here */
+  padding: 2px;
+  background: #1e232b;
+  min-width: 18% !important;
+  border-radius: 2px;
+  border: 1px solid rgba(155, 155, 155, 0.2);
 }
 
-.rightNavDrawer {
-  position: absolute;
-  top: 100%;
-  right: 0;
-  background-color: #fff;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  z-index: 1;
-  display: none; /* Hide the drawer by default */
-}
-
-.show {
-  display: block; /* Show the drawer when the "show" class is applied */
-}
-
-.drawer-menu-list {
-  padding: 10px;
-  list-style: none;
-  margin: 0;
-}
-
-.drawer-menu-list li {
-  margin-bottom: 5px;
-}
-
-/* Additional Styles for Buttons */
-.btn-link {
-  background-color: #fff; /* Set button background to white */
-  color: #FFA500; /* Theme color for text */
-  padding: 5px 10px;
-  border-radius: 4px;
+nav form .search-data {
+  width: 100%;
+  height: 100%;
+  padding: 0 10px;
+  color: #fff;
+  font-size: 17px;
   border: none;
+  font-weight: 500;
+  background: none;
+}
+
+nav form button {
+  padding: 0 15px;
+  color: #fff;
+  font-size: 17px;
+  background: #ffa500;
+  border: none;
+  border-radius: 2px;
   cursor: pointer;
 }
 
-.btn-link:hover {
-  background-color: #FFA500; /* Theme color for background on hover */
-  color: #fff; /* Set text color to white on hover */
+nav form button:hover {
+  background: #ffa500;
 }
 
-/* Media Queries for Responsiveness */
-/* For screen sizes less than or equal to 768px */
-@media (max-width: 768px) {
-  .header-text {
-    font-size: 20px; /* Reduce font size for smaller screens */
-  }
+nav .menu-icon,
+nav .cancel-icon,
+nav .search-icon {
+  width: 40px;
+  text-align: center;
+  margin: 0 50px;
+  font-size: 18px;
+  color: #fff;
+  cursor: pointer;
+  display: none;
+}
 
-  .logo-item {
-    /* Adjust logo size for smaller screens */
-    max-width: 80px;
-    /* margin-right: auto; Push the logo to the left */
-  }
+nav .menu-icon span,
+nav .cancel-icon,
+nav .search-icon {
+  display: none;
+}
 
-  .search-container {
-    /* Adjust search container width for smaller screens */
+
+@media (max-width: 1245px) {
+  nav {
+    padding: 0 50px;
+  }
+}
+
+@media (max-width: 1140px) {
+  nav {
+    padding: 0px;
+  }
+  nav .logo {
+    flex: 2;
+    text-align: center;
+  }
+  nav .nav-items {
+    position: fixed;
+    z-index: 99;
+    top: 70px;
     width: 100%;
-    max-width: 200px;
+    left: -100%;
+    height: 100%;
+    padding: 10px 50px 0 50px;
+    text-align: center;
+    background: #14181f;
+    display: inline-block;
+    transition: left 0.3s ease;
   }
-
-  .agent-directory-item {
-    display: none; /* Hide the agent-directory-item on smaller screens */
+  nav .nav-items.active {
+    left: 0px;
   }
-
-  .nav-ul {
-    flex-direction: column; /* Stack the user menu items vertically */
+  nav .nav-items li {
+    line-height: 40px;
+    margin: 30px 0;
   }
-
-  .user-menu-item {
-    margin-bottom: 10px; /* Add spacing between user menu items */
+  nav .nav-items li a {
+    font-size: 20px;
   }
-
-  /* Show the button and dropdown menu on mobile */
-  .user-menu-item {
-    display: flex;
-    justify-content: space-between; /* Align the button and icon to the extremes */
-    flex-grow: 1;
+  nav form {
+    position: absolute;
+    top: 80px;
+    right: 50px;
+    opacity: 0;
+    pointer-events: none;
+    transition: top 0.3s ease, opacity 0.1s ease;
   }
-  .flex-mobile{
-    display: flex;
-    justify-content: space-between; /* Align the button and icon to the extremes */
-    /* flex-grow: 1; */
+  nav form.active {
+    top: 95px;
+    opacity: 1;
+    pointer-events: auto;
   }
-
-  .rightNavDrawer {
+  nav form:before {
+    position: absolute;
+    content: "";
+    top: -13px;
+    right: 0px;
+    width: 0;
+    height: 0;
+    z-index: -1;
+    border: 10px solid transparent;
+    border-bottom-color: #1e232b;
+    margin: -20px 0 0;
+  }
+  nav form:after {
+    position: absolute;
+    content: '';
+    height: 60px;
+    padding: 2px;
+    background: #1e232b;
+    border-radius: 2px;
+    min-width: calc(100% + 20px);
+    z-index: -2;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+  nav .menu-icon {
     display: block;
-    position: relative;
   }
-
-  /* Show the logo on mobile */
-  .logo-item {
-    display: flex;
-    align-items: center;
+  nav .search-icon,
+  nav .menu-icon span {
+    display: block;
   }
-
-  /* Hide other navigation elements on mobile */
-  .search-container {
+  nav .menu-icon span.hide,
+  nav .search-icon.hide {
     display: none;
+  }
+  nav .cancel-icon.show {
+    display: block;
+  }
+}
+
+/* Additional styles for content */
+.content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.content header {
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.content .text {
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.space {
+  margin: 10px 0;
+}
+
+nav .logo.space {
+  color: #FFA500;
+  padding: 0 5px 0 0;
+}
+
+@media (max-width: 980px) {
+  nav .menu-icon,
+  nav .cancel-icon,
+  nav .search-icon {
+    margin: 0 20px;
+  }
+  nav form {
+    right: 30px;
+  }
+}
+
+@media (max-width: 350px) {
+  nav .menu-icon,
+  nav .cancel-icon,
+  nav .search-icon {
+    margin: 0 10px;
+    font-size: 16px;
   }
 }

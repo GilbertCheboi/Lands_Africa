@@ -45,10 +45,13 @@ export function Map({ items }) {
   const { coordinates1, coordinates } = extractCoordinates();
 
   const mapContainerStyle = {
-    width: '100%',
-    height: '800px',
-    left: '400px',
+    width: 'calc(100% - 8px)', /* 100% width minus 8px (4px on each side) for the left margin */
+    height: 'calc(100% - 50px - 8px)', /* 100% height minus 50px (header height) and 8px for the top margin */
+    margin: '4px', /* Add 4px margin on all sides */
+    position: 'relative', /* Position relative to allow positioning of child elements */
   };
+  
+  
 
   return (
     <LoadScript googleMapsApiKey="AIzaSyAr-cGH_dOd4h3lmwoSIEaDXcLn4O3G-98">

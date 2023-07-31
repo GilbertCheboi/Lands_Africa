@@ -46,22 +46,20 @@ export function App() {
   }, []);
 
   return (
-  <div>
-    <Header />
+  <div className='main-page'>
+    <Header />    
     <div className="main-container">
-      
-      <div className="map-container">
-        <Map items={items} />
-      </div>
-      <div className='side-page '>
         
+      <div className='side-page '>
         <div>
           {cardItems}
         </div>
       </div>
+      <div className="map-container">
+        <Map items={items} />
+      </div>
     </div>
-    {/* <PropertyDetails /> */}
-    </div>
+  </div>
   );
 }
 

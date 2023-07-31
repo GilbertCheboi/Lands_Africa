@@ -1,70 +1,45 @@
+.main-page{
+  background-color: #f2f2f2;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+}
 .main-container {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 2fr; /* Divide the main container into two columns */
+  overflow: hidden; /* Hide the overflow for the main container */
+  height: 100%; /* Fill the entire height of the container */
+  /* margin-top: 60px; */
+  
 }
 
-.map-container {
-  flex: 1; /* Make the map container take up the remaining available space */
-  height: 100vh; /* Set the height of the map container to fill the viewport height */
-}
-
-.cards-container {
-  flex: 1; /* Allow the cards container to take up the remaining space */
-  overflow-y: auto; /* Enable vertical scrolling for the card container */
-  padding: 20px; /* Add padding for spacing */
-}
-.d-flex{
-    width: 80%;
-    height: 30%;
-    border: #fff;
-    border-radius: 2%;
-    background-color: #fff;
-    margin: 4px;
-    border: 3px solid #fff;
-}
-
-.col-4{
-    float: left;
-   
-    margin-right: 10px;
-}
-.col-3 {
-    float: right;
-    width: 50%;
-    margin-right: 0px;
-    
-}
+/* Sidebar styles */
 .side-page {
-    position: absolute;
-    top: 60;
-    left: 0;
-    width: 400px;
-    /* height: 100vh; */
-    /* background-color:  #DCDCDC; */
-    /* Add any other styling you need */
-  }
+  background-color: #f2f2f2;
+  overflow-y: auto; /* Enable vertical scrolling for the sidebar */
+  max-height: 100vh; /* Limit the sidebar height to the viewport height */
+}
 
-  .search-container {
-    display: flex;
-  }
+/* Map container styles */
+.map-container {
+  position: relative; /* For positioning child elements */
+  background-color: #ddd; /* Adjust as needed */
+  height: 100vh;
+}
 
-  .calendly-inline-widget {
-    min-width:320px;
-    height:700px;
-  }
-  
-  input[type="text"] {
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px 0 0 4px;
-    flex: 1;
-  }
-  
-  button[type="submit"] {
-    padding: 10px 15px;
-    background-color: #fff500;
-    color: white;
-    border: none;
-    border-radius: 0 4px 4px 0;
-    cursor: pointer;
-  }
-  
+input[type="text"] {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px 0 0 4px;
+  flex: 1;
+}
+
+button[type="submit"] {
+  padding: 10px 15px;
+  background-color: #ffa500;
+  color: white;
+  border: none;
+  border-radius: 0 4px 4px 0;
+  cursor: pointer;
+}
