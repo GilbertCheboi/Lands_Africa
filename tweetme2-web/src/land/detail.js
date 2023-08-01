@@ -4,6 +4,7 @@ import React, { useEffect, useState } from 'react';
 import './styles.css';
 import Header from './Header';
 import PropertyDetails from './PropertyDetails';
+import Footer from './Footer';
 
 export function ItemDetails({ itemId }) {
   const [itemDetails, setItemDetails] = useState({});
@@ -44,13 +45,10 @@ export function ItemDetails({ itemId }) {
   return (
     <div>
       <Header />
-      <div className="main-container">
-       {/* <h2>hello world</h2>
-      <h2>{itemDetails.content}</h2>
-      <p>{itemDetails.price}</p> */}
-      {/* Display other item details here */}
+      <div className='main-detail'>
       <PropertyDetails itemDetails={itemDetails}/>
       </div>
+      <Footer />
     </div>
   );
 }

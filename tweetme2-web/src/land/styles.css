@@ -43,3 +43,11 @@ button[type="submit"] {
   border-radius: 0 4px 4px 0;
   cursor: pointer;
 }
+
+.main-details{
+  display: grid;
+  grid-template-columns: 1fr 2fr; /* Divide the main container into two columns */
+  overflow: hidden; /* Hide the overflow for the main container */
+  height: 100%; /* Fill the entire height of the container */
+  margin-top: 60px;
+}
