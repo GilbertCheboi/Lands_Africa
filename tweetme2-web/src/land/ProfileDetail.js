@@ -5,7 +5,7 @@ import './styles.css';
 import Header from './Header';
 import PropertyDetails from './PropertyDetails';
 
-export function ItemDetails({ itemId }) {
+export function ProfileDetail   ({ username }) {
   const [itemDetails, setItemDetails] = useState({});
   const [loading, setLoading] = useState(true);
 
@@ -13,7 +13,7 @@ export function ItemDetails({ itemId }) {
     const fetchDetails = async () => {
       console.log("hello world");
       try {
-        const response = await fetch(`http://127.0.0.1:8000//api/Land/${itemId}/`);
+        const response = await fetch(`http://127.0.0.1:8000/api/profiles/${username}/`);
         console.log("hello world");
         if (!response.ok) {
           throw new Error('Error fetching item details');
@@ -35,7 +35,7 @@ export function ItemDetails({ itemId }) {
     };
 
     fetchDetails();
-  }, [itemId]);
+  }, [username]);
 
   if (loading) {
     return <div>Loading...</div>;
@@ -45,11 +45,11 @@ export function ItemDetails({ itemId }) {
     <div>
       <Header />
       <div className="main-container">
-       {/* <h2>hello world</h2>
-      <h2>{itemDetails.content}</h2>
-      <p>{itemDetails.price}</p> */}
-      {/* Display other item details here */}
-      <PropertyDetails itemDetails={itemDetails}/>
+       <h2>hello world</h2> 
+    {/* //   <h2>{itemDetails.content}</h2>
+    //   <p>{itemDetails.price}</p> */}
+    //   {/* Display other item details here */}
+    {/* //   <PropertyDetails itemDetails={ProfileDetail}/> */} 
       </div>
     </div>
   );
