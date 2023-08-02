@@ -14,7 +14,7 @@ export function SearchComponent () {
 
   const fetchSearchResults = async () => {
     try{
-      const response = await fetch(`http://192.168.0.13:8001/search?q=${query}`)
+      const response = await fetch(`http://127.0.0.1:8000/search?q=${query}`)
       const data = await response.json();
       console.log(data)
 

@@ -4,6 +4,31 @@ import "./Header.css";
 const Header = () => {
   const [isActive, setIsActive] = useState(false);
   const [isFormActive, setIsFormActive] = useState(false);
+    const [query, setSearchQuery] = useState('');
+  const [searchResults, setSearchResults] = useState([]);
+
+  useEffect(() => {
+    if (query.trim() !== '') {
+      fetchSearchResults();
+    } else {
+      setSearchResults([]);
+    }
+  }, [query]);
+
+  const fetchSearchResults = async () => {
+    try{
+      const response = await fetch(`http://127.0.0.1:8000/search?q=${query}`)
+      const data = await response.json();
+      console.log(data)
+
+     
+        setSearchResults(data);
+     
+    } catch(error)  {
+        console.error('Error fetching search results:', error);
+      };
+  };
+
 
   const toggleMenu = () => {
     setIsActive(!isActive);
@@ -18,6 +43,7 @@ const Header = () => {
   };
 
   return (
+    <div>
     <nav>
       <div className={`menu-icon ${isActive ? 'hide' : ''}`} onClick={toggleMenu}>
         <span className="fas fa-bars"></span>
@@ -38,11 +64,21 @@ const Header = () => {
         <span className="fas fa-times"></span>
       </div>
       <form className={`search-form ${isFormActive ? 'active' : ''}`} action="#">
-        <input type="search" className="search-data" placeholder="Search" required />
+        <input type="search" className="search-data" placeholder="Search" value={query}
+        onChange={(e) => setSearchQuery(e.target.value)} required />
         <button type="submit" className="fas fa-search"></button>
       </form>
+      
     </nav>
-
+    <ul>
+        {searchResults.map((result) => (
+          <li key={result.title}>
+            <h3>{result.title}</h3>
+            <p>{result.content}</p>
+          </li>
+        ))}
+      </ul>
+  </div>
   );
 };
 
