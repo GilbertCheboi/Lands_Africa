@@ -35,7 +35,8 @@ from Land.views import (
     home_view,
     land_detail_view,
     contact,
-    about
+    about,
+    privacy,
     
  
 )
@@ -58,6 +59,7 @@ urlpatterns = [
     path('react/', TemplateView.as_view(template_name='react.html')),
     re_path(r'profiles?/', include('profiles.urls')),
     path('About/', about),
+    path('Privacy/', privacy),
     path('Contact/', contact),
     path('Land/<int:item_id>/', land_detail_view),
     path('api/accounts/', include('accounts.api.urls')),

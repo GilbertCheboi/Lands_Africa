@@ -11,36 +11,48 @@ export function  AboutPage () {
     <div className="about-page">
       <h1>About Us</h1>
       <p>
-        Welcome to our website! We are a dedicated team of professionals
-        passionate about providing high-quality products/services to our
-        customers. Our mission is to deliver excellence and customer satisfaction
-        in everything we do.
+      Welcome to "Lands in Africa," your premier online destination for discovering 
+      diverse and captivating real estate opportunities across the beautiful continent of Africa. 
+      We are passionate about transforming the way realtors and buyers connect, 
+      ensuring seamless experiences, and empowering dreams of property ownership and investment.
       </p>
+      <h2>Our Mission and Vision</h2>
       <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sodales
-        orci et ipsum aliquet, ac rhoncus est fringilla. Nam gravida blandit mi,
-        eu facilisis nibh fermentum eu. Praesent rhoncus mauris eu enim euismod,
-        ut varius velit facilisis. Suspendisse sit amet tristique quam. Nam
-        venenatis nulla sit amet massa faucibus, nec bibendum nisi vulputate.
+      At "Lands in Africa," our mission is to revolutionize the African real estate market by 
+      providing a trusted platform that simplifies property search and transaction processes. 
+      We envision a future where every realtor and buyer can easily explore the vast landscapes and 
+      opportunities Africa has to offer, making informed decisions with confidence and ease.
       </p>
+      <h2>Our Unique Selling Proposition (USP)</h2>
       <p>
-        Sed elementum libero eget nulla ultrices euismod. Sed fermentum quam sit
-        amet odio consequat, quis varius turpis facilisis. Vestibulum sed sem
-        fringilla, posuere velit vel, posuere sapien. Suspendisse fringilla
-        facilisis diam, auctor pharetra odio rhoncus eu.
+      Comprehensive African Property Listings: We curate a diverse range of properties, from urban spaces to tranquil getaways and wildlife experiences, offering something for every dream and investment.
+
+      Advanced Property Search: Our user-friendly search tools and filters allow you to find properties based on location, property type, amenities, and investment potential, ensuring you discover the perfect match.
+
+      Personalized Support: We are committed to providing exceptional customer service, assisting you at every step of your journey, and ensuring a smooth realtor-buyer interaction.
       </p>
-      <h2>Our Team</h2>
+      <h2>Our Story and Journey</h2>
       <p>
-        We have assembled a talented and diverse team of experts in their
-        respective fields. Each team member brings unique skills and experiences
-        to help us achieve our goals and serve our customers better.
+      The idea for "Lands in Africa" was born out of our passion for Africa's rich cultural heritage, 
+      breathtaking landscapes, and untapped potential in real estate. As seasoned real estate professionals, 
+      we recognized the need for a dedicated platform that showcases the diversity and opportunities that Africa offers.
       </p>
+      <h2>Our Values and Culture</h2>
       <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sodales
-        orci et ipsum aliquet, ac rhoncus est fringilla. Nam gravida blandit mi,
-        eu facilisis nibh fermentum eu. Praesent rhoncus mauris eu enim euismod,
-        ut varius velit facilisis. Suspendisse sit amet tristique quam. Nam
-        venenatis nulla sit amet massa faucibus, nec bibendum nisi vulputate.
+      At "Lands in Africa," we are driven by integrity, transparency, and a commitment to excellence. We foster 
+      a collaborative and innovative culture that values diversity and aims to make a positive impact on the African real estate landscape.
+      </p>
+
+      <h2>Testimonials</h2>
+      <p>
+      "I found my dream property through 'Lands in Africa'! The platform's search filters and 
+      personalized support made the process so much easier." - Sarah, Happy Buyer
+      </p>
+
+      <h2>Customer-Centric Approach</h2>
+      <p>
+      Your satisfaction is at the core of our platform. We are dedicated to understanding your needs, 
+      providing timely support, and delivering a memorable real estate journey that exceeds your expectations.
       </p>
     </div>
     <Footer />

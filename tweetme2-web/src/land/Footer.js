@@ -44,8 +44,9 @@ const Footer = () => {
       </div>
 
       <div className="footer-bottom">
-        <p>&copy; {new Date().getFullYear()} LandAfrica. All rights reserved.</p>
-        <p>Designed and Developed by LandAfrica</p>
+        <p>&copy; {new Date().getFullYear()}<a href="/Privacy">Lands Africa. All rights reserved.</a></p>
+
+        <p>Designed and Developed by Lands Africa</p>
       </div>
     </footer>
   );

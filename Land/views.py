@@ -17,6 +17,9 @@ def land_detail_view(request, item_id, *args, **kwargs):
 def about(request, *args, **kwargs):
     return render(request, "tweets/about.html")
 
+def privacy(request, *args, **kwargs):
+    return render(request, "tweets/privacy.html")
+
 def contact(request,  *args, **kwargs):
     return render(request, "tweets/contact.html")
 

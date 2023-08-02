@@ -6,6 +6,7 @@ import { Contact } from './Contact'
 import {Login} from './login'
 import { Register } from './register'
 import { ProfileDetail } from './ProfileDetail'
+import {PrivacyPage} from './Privacypolicy'
 
 
 
@@ -19,5 +20,6 @@ export {
     Register,
     Login,
     ProfileDetail,
+    PrivacyPage,
 
 }
