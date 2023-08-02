@@ -1,0 +1,178 @@
+/* PropertyDetails.css */
+
+/* Global styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* ProfileDetail container styles */
+  .profile-container {
+    max-width: 800px;
+    margin: 0 auto; /* Center the container */
+    padding: 20px;
+    background-color: #f7f7f7;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  }
+  
+  .profile-container h1 {
+    font-size: 32px;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #ffa500; /* Theme color for the heading */
+  }
+  
+  .profile-section {
+    background-color: #ffffff; /* White background */
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  }
+  
+  .profile-section h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .profile-section p {
+    font-size: 16px;
+    margin: 0;
+    margin-bottom: 10px;
+  }
+  
+  .profile-section button {
+    background-color: #ffa500; /* Theme color for the button */
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 20px;
+    transition: background-color 0.2s;
+  }
+  
+  .profile-section button:hover {
+    background-color: #ff8c00; /* Lighter shade on hover */
+  }
+  
+  /* Center the profile section */
+  .profile-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  
+  /* PostLandListing styles */
+  .post-land-section {
+    padding: 20px;
+    border-radius: 5px;
+    background-color: #f7f7f7;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    margin-top: 20px;
+  }
+  
+  .post-land-section h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .post-land-section form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .post-land-section label {
+    font-size: 16px;
+    margin-bottom: 5px;
+  }
+  
+  .post-land-section input,
+  .post-land-section textarea {
+    font-size: 14px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+  }
+  
+  .post-land-section textarea {
+    resize: vertical;
+  }
+  
+  .post-land-section button {
+    background-color: #ffa500; /* Theme color */
+    color: #fff;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .post-land-section button:hover {
+    background-color: #ff8c00; /* Lighter shade on hover */
+  }
+  
+  /* LandListings styles */
+  .land-listings-section {
+    margin-top: 20px;
+  }
+  
+  .land-listings-section h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .land-listings-section ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .land-listings-section li {
+    padding: 20px;
+    border-radius: 5px;
+    background-color: #f7f7f7;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
+  }
+  
+  .land-listings-section h3 {
+    font-size: 20px;
+    margin-bottom: 5px;
+  }
+  
+  .land-listings-section p {
+    margin: 0;
+    margin-bottom: 10px;
+  }
+  
+  .land-listings-section img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    border-radius: 5px;
+    margin-top: 10px;
+  }
+  
+  .land-listings-section .actions {
+    margin-top: 10px;
+  }
+  
+  .land-listings-section .actions button {
+    background-color: #ffa500; /* Theme color */
+    color: #fff;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 10px;
+  }
+  
+  .land-listings-section .actions button:hover {
+    background-color: #ff8c00; /* Lighter shade on hover */
+  }
+  
