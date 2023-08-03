@@ -6,6 +6,7 @@ import { AboutPage, App, ItemDetails, SearchComponent, Register, Login, ProfileD
 
 import * as serviceWorker from './serviceWorker';
 import { Contact } from './land/Contact';
+import { ProfileDetails } from './land/PropertyDetails';
 
 const e = React.createElement;
 const tweetsEl = document.getElementById("tweetme-2");
@@ -56,10 +57,10 @@ tweetDetailElements.forEach(container=> {
 })
 const userProfileBadgeElements = document.querySelectorAll(".tweetme-2-profile-badge");
 
-userProfileBadgeElements.forEach(container => {
-  ReactDOM.render(
-    e(ProfileDetail, container.dataset),
-   container);
-});
+// userProfileBadgeElements.forEach(container => {
+//   ReactDOM.render(
+//     e(ProfileDetails, container.dataset),
+//    container);
+// });
 
 serviceWorker.unregister();

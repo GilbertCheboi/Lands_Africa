@@ -6,16 +6,16 @@ import './styles.css';
 const PropertyDetails = ({ itemDetails }) => {
   // Static data for property details
   const price = itemDetails.price
+  const description = itemDetails.content
+  const sub_county =  itemDetails.sub_county
+  const specific_location = itemDetails.specific_location
+  const county = itemDetails.county
+
   const propertyInfo = {
-    // price: "KES 85,000,000",
     lotsize: "0.5",
     address: "Kilimani Area, Nairobi",
-    city: "Nairobi",
-    zipcode: "Nairobi",
-    neighborhood: "Kilimani",
+    
     monthlyCost: "KES 250,000 (estimated)",
-    description:
-      "Welcome to this remarkable property situated in Nairobi's prestigious Kilimani area. This prime land spans approximately 10,454 square feet, offering an excellent opportunity for investors and developers to create their vision in one of the city's most sought-after neighborhoods.The property's strategic location ensures easy access to major roads, shopping centers, schools, hospitals, and various amenities, making it an ideal investment prospect. With the potential to develop residential or commercial projects, this land promises lucrative returns and endless possibilities.Don't miss out on this rare opportunity to own a piece of Kilimani's real estate. Schedule a viewing today and explore the potential that this outstanding property holds.",
   };
 
   // Static data for agent information
@@ -29,48 +29,43 @@ const PropertyDetails = ({ itemDetails }) => {
 
   const mapContainerStyle = {
     width: "100%",
-    height: '600px',
+    height: '500px',
     // left: '400px'
   };
-
-  const center =
-  {
-    lat: -0.149895, lng: 37.308025
-  };
-  // { lat: 0.467818, lng: 35.373523},
+    // Assume that itemDetails is an asynchronous function that returns a promise
+    // const item = await itemDetails();
+  
+    const center_latitude = itemDetails.center_latitude;
+    const center_longitude = itemDetails.center_longitude;
+    const pointA_latitude = itemDetails.pointA_latitude;
+    const pointA_longitude = itemDetails.pointA_longitude;
+    const pointA1_latitude = itemDetails.pointA1_latitude;
+    const pointA1_longitude = itemDetails.pointA1_longitude;
+    const pointB_latitude = itemDetails.pointB_latitude;
+    const pointB_longitude = itemDetails.pointB_longitude;
+    const pointC_latitude = itemDetails.pointC_latitude;
+    const pointC_longitude = itemDetails.pointC_longitude;
+    const pointD_latitude = itemDetails.pointD_latitude;
+    const pointD_longitude = itemDetails.pointD_longitude;
+  
+  
 
 
   const coordinates1 = [
     // { lat: items.center_latitude, lng: items.center_longitude, title: items.realtor },
     { lat: 0.467818, lng: 35.373523, title: 'Optiven' },
-    { lat: -1.288179, lng: 36.795621, title: 'Optiven' },
-    { lat: -2.156234, lng: 40.598549, title: 'Optiven' },
-    { lat: -1.800367, lng: 36.759096, title: 'Optiven' },
-    { lat: -1.239454, lng: 36.886929, title: 'Optiven' },
-    { lat: 0.531382, lng: 35.561828, title: 'Optiven' },
-    { lat: 3.761184, lng: 34.860423, title: 'Optiven' },
-    { lat: 2.624855, lng: 36.603047, title: 'Optiven' },
-    { lat: -0.471087, lng: 34.017127, title: 'Optiven' },
   ];
 
   const coordinates = [
-    [
 
-      { lat: 0.468085, lng: 35.373855 },
-      { lat: 0.468230, lng: 35.374021 },
-      { lat: 0.467846, lng: 35.374496 },
-      { lat: 0.467631, lng: 35.374314 },
-      { lat: 0.468085, lng: 35.373855 },
+    { lat: pointA_latitude, lng: pointA_longitude },
+    { lat: pointB_latitude, lng: pointB_longitude },
+    { lat: pointC_latitude, lng: pointC_longitude },
+    { lat: pointD_latitude, lng: pointD_longitude },
+    { lat: pointA1_latitude, lng: pointA1_longitude },
 
-    ],
-    [
-      { lat: 0.467647, lng: 35.373393 },
-      { lat: 0.467563, lng: 35.373548 },
-      { lat: 0.467955, lng: 35.373650 },
-      { lat: 0.467976, lng: 35.373489 },
-      { lat: 0.467647, lng: 35.373393 },
-    ]
-  ]
+    ];
+
 
   return (
     <main id="mainContent" className="main-content">
@@ -97,7 +92,7 @@ const PropertyDetails = ({ itemDetails }) => {
           <div className="property-info-address-and-media-types">
             <div className="property-info-address">
               <h1 className="property-info-address-main">
-                {propertyInfo.address}
+                {county}
               </h1>
               <span className="property-info-address-citystatezip">
                 <a
@@ -105,14 +100,14 @@ const PropertyDetails = ({ itemDetails }) => {
                   href="/las-vegas-nv/"
                   title="Las Vegas Homes For Sale"
                 >
-                  {propertyInfo.city}, {propertyInfo.state}
+                  {county}
                 </a>{" "}
                 <a
                   className="standard-link text-only"
                   href="/las-vegas-nv/89128/"
                   title="89128 Homes For Sale"
                 >
-                  {propertyInfo.zipcode}
+                  {sub_county}
                 </a>
               </span>
               <span className="property-info-neighborhood">
@@ -123,7 +118,7 @@ const PropertyDetails = ({ itemDetails }) => {
                   href="/las-vegas-nv/neighborhood/desert-shores/"
                   title="Desert Shores"
                 >
-                  {propertyInfo.neighborhood}
+                  {specific_location}
                 </a>
               </span>
             </div>
@@ -133,7 +128,7 @@ const PropertyDetails = ({ itemDetails }) => {
             <GoogleMap
               mapContainerStyle={mapContainerStyle}
               center={coordinates1[0]} // Set the center to the first marker coordinates
-              zoom={7}
+              zoom={15}
             >
               {coordinates1.map((marker, index) => (
                 <Marker
@@ -184,7 +179,7 @@ const PropertyDetails = ({ itemDetails }) => {
             </h2>
             <div className="ldp-description-text-container truncate-container">
               <p id="ldp-description-text" className="ldp-description-text">
-                {propertyInfo.description}
+                {description}
               </p>
             </div>
           </div>
@@ -196,6 +191,16 @@ const PropertyDetails = ({ itemDetails }) => {
           >
             See All
           </button>
+
+          <div className="property-image" style={{ width: "100%", height: "400px", overflow: "hidden" }}>
+            <img
+              src={itemDetails.image}
+              alt="Property"
+              style={{ width: "100%", height: "100%", objectFit: "cover" }}
+            />
+          </div>
+
+
           <div className="agent-information-wrapper">
               <div className="agent-information-mls-info">
                 <p className="listing-agent-title">Listing Agent</p>

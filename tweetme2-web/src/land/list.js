@@ -1,18 +1,19 @@
 import React, { useEffect, useState } from 'react';
 import { Map } from './feed';
 import './styles.css';
+import "./Header.css";
 import Card from './Card';
 import Header from './Header';
-import PropertyDetails from './PropertyDetails';
-
+// import PropertyDetails from './PropertyDetails';
+import { SearchComponent } from './search'; // Import the SearchComponent
 
 export function App() {
   const [items, setItems] = useState([]);
+  const [searchQuery, setSearchQuery] = useState('');
 
   const fetchData = async () => {
     try {
       const response = await fetch('http://127.0.0.1:8000/api/Land/');
-      // const response = await fetch('http://192.168.0.13:8001/api/Land/');
       const data = await response.json();
       console.log(data);
       setItems(data.results);
@@ -21,11 +22,9 @@ export function App() {
     }
   };
 
-
-
   const cardItems = items.map((item, index) => (
     <Card
-      id = {item.id}
+      id={item.id}
       key={index}
       title={item.name}
       description={`${item.country}, ${item.county}, ${item.specific_location}`}
@@ -37,31 +36,40 @@ export function App() {
       content={item.content}
       timestamp={item.timestamp}
       realtor={item.realtor}
+       center_latitude={item.center_latitude}
+       center_longitude={item.center_longitude}
+       pointA_latitude={item.pointA_latitude}
+       pointA_longitude={item.pointA_longitude}
+       pointA1_latitude={item.pointA1_latitude}
+       pointA1_longitude={item.pointA1_longitude}
+       pointB_latitude={item.pointB_latitude}
+       pointB_longitude={item.pointB_longitude}
+       pointC_latitude={item.pointC_latitude}
+       pointC_longitude={item.pointC_longitude}
+       pointD_latitude={item.pointD_latitude}
+       pointD_longitude= {item.pointD_longitude}
       // Add any other props you want to pass to the Card component
     />
   ));
 
-  useEffect(() => {
+  useEffect(() => { 
     fetchData();
   }, []);
 
   return (
-  <div className='main-page'>
-    <Header />    
-    <div className="main-container">
-        
-      <div className='side-page '>
-        <div>
-          {cardItems}
+    <div className='main-page'>
+      <Header />
+      <div className="main-container">
+        <div className='side-page '>
+          {/* Render the SearchComponent with the searchQuery prop */}
+          <SearchComponent searchQuery={searchQuery} />
+          {/* Or, render the card items if there is no search query */}
+          {searchQuery.trim() === '' && cardItems}
+        </div>
+        <div className="map-container">
+          <Map items={searchQuery.trim() === '' ? items : []} />
         </div>
       </div>
-      <div className="map-container">
-        <Map items={items} />
-      </div>
     </div>
-  </div>
   );
 }
-
-//AIzaSyAr-cGH_dOd4h3lmwoSIEaDXcLn4O3G-98
-//http://192.168.0.20:8000/api/Land/

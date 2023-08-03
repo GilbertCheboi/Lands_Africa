@@ -153,3 +153,29 @@
   font-weight: bold;
 }
 /* Rest of the styling for other sections and elements as needed */
+
+
+/* Image slider container */
+.property-image {
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
+}
+
+.property-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Media query for small screens */
+@media (max-width: 640px) {
+  .ldp-grid-container {
+    grid-template-columns: 1fr; /* Change to a single column layout */
+    width: 100%;
+  }
+
+  .realtor-info-box {
+    display: none; /* Hide the map container */
+  }
+}
