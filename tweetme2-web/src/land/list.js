@@ -49,7 +49,7 @@ export function App() {
       <div className="main-container">
         <div className='side-page '>
           {/* Render the SearchComponent with the searchQuery prop */}
-          <SearchComponent searchQuery={searchQuery} />
+          <SearchComponent searchQuery={searchQuery} cardItems={cardItems}  />
           {/* Or, render the card items if there is no search query */}
           {searchQuery.trim() === '' && cardItems}
         </div>
