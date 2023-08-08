@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import { ProfileBadgeComponent } from './profiles';
-import { AboutPage, App, ItemDetails, SearchComponent, Register, Login } from './land';
+import { AboutPage, App, ItemDetails, SearchComponent, Register, Login, ProfileDetail, PrivacyPage } from './land';
 
 import * as serviceWorker from './serviceWorker';
 import { Contact } from './land/Contact';
@@ -18,9 +18,19 @@ if (detail) {
   ReactDOM.render(e(ItemDetails, detail.dataset), detail);
 }
 
+const profiledetail = document.getElementById("profile-2-detail");
+if (profiledetail) {
+  ReactDOM.render(e(ProfileDetail, profiledetail.dataset), profiledetail);
+}
+
 const about = document.getElementById("tweetme-2-about");
 if (about) {
   ReactDOM.render(e(AboutPage, about.dataset), about);
+}
+
+const privacy = document.getElementById("tweetme-2-privacy");
+if (privacy) {
+  ReactDOM.render(e(PrivacyPage, privacy.dataset), privacy);
 }
 
 const contact = document.getElementById("tweetme-2-contact");
@@ -50,8 +60,11 @@ tweetDetailElements.forEach(container=> {
         container);
 })
 const userProfileBadgeElements = document.querySelectorAll(".tweetme-2-profile-badge");
+
 userProfileBadgeElements.forEach(container => {
-  ReactDOM.render(e(ProfileBadgeComponent, container.dataset), container);
+  ReactDOM.render(
+    e(ProfileDetail, container.dataset),
+   container);
 });
 
 serviceWorker.unregister();

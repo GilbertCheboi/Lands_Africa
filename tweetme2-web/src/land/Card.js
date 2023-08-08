@@ -40,7 +40,7 @@ const Card = ({ title, description, image, price, content, timestamp, realtor, i
         <div className="custom-card-header">
           <div className="user-name">{realtor}</div>
           <div className="header-actions">
-            <button className="expand-button" onClick={handleLink}>
+            <button className="expand-button" onClick={handleExpandClick}>
               <span>{expanded ? 'less' : 'more'}</span>
             </button>
           </div>
