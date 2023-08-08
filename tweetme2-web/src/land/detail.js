@@ -13,7 +13,7 @@ export function ItemDetails({ itemId }) {
     const fetchDetails = async () => {
       console.log("hello world");
       try {
-        const response = await fetch(`http://192.168.0.13:8001/api/Land/${itemId}/`);
+        const response = await fetch(`http://49.13.51.138/api/Land/${itemId}/`);
         console.log("hello world");
         if (!response.ok) {
           throw new Error('Error fetching item details');
