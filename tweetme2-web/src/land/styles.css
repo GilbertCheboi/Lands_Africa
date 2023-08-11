@@ -10,6 +10,7 @@
   grid-template-columns: 1fr 2fr; /* Divide the main container into two columns */
   overflow: hidden; /* Hide the overflow for the main container */
   height: 100%; /* Fill the entire height of the container */
+  margin-top: -15px;
   /* margin-top: 60px; */
   
 }
@@ -49,5 +50,47 @@ button[type="submit"] {
   grid-template-columns: 1fr 2fr; /* Divide the main container into two columns */
   overflow: hidden; /* Hide the overflow for the main container */
   height: 100%; /* Fill the entire height of the container */
-  margin-top: 60px;
+  /* margin-top: 50px; */
 }
+
+
+
+/* Styling for the form container */
+.search-container {
+  display: flex;
+  /* height: 40px; */
+  padding: 2px;
+  background: #fff;
+  min-width: 18% !important;
+  border-radius: 2px;
+  border: 1px solid rgba(155, 155, 155, 0.2);
+  width: 90%;
+}
+
+/* Styling for the input element inside the form */
+.search-data {
+  width: 100%;
+  height: 100%;
+  padding: 0 10px;
+  color: #ffa500;
+  font-size: 17px;
+  border: none;
+  font-weight: 500;
+  background: none;
+}
+
+/* Media query for small screens */
+@media (max-width: 640px) {
+  .main-container {
+    grid-template-columns: 1fr; /* Change to a single column layout */
+  }
+
+  .map-container {
+    display: none; /* Hide the map container */
+  }
+}
+
+
+
+
+
