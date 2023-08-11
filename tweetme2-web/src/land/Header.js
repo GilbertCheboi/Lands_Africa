@@ -11,7 +11,7 @@ const Header = () => {
 
   return (
     <nav>
-      <div className="logo">Lands In Africa</div>
+      <div className="logo"> <a href="/">Lands In Africa</a></div>
       <div className={`nav-items ${isActive ? 'active' : ''}`}>
         <li><a href="/">Home</a></li>
         <li><a href="/About/">About</a></li>
