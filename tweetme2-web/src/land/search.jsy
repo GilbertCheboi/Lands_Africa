@@ -56,13 +56,6 @@ export function SearchComponent({ searchQuery }) {
         value={query}
         onChange={(e) => setQuery(e.target.value)} // <-- Update the state with setQuery
         placeholder="Search..."
-<<<<<<< HEAD
-      />
-      {cardItems}
-    </div>
-  );
-}
-=======
         className="search-data"
       />
       </form>
@@ -70,4 +63,4 @@ export function SearchComponent({ searchQuery }) {
     </div>
   );
 }
->>>>>>> 5ecb81139f7557700353f23b7fe4cf926e05660d
+

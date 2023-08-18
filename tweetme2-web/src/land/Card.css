@@ -1,179 +1,94 @@
-/* Card.css
-
 .custom-card {
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    max-width: 345px;
-    margin: 10px;
-  }
-  
-  .custom-card-header {
-    display: flex;
-    align-items: center;
-    padding: 5px;
-  }
-  
-  .avatar {
-    background-color: red; /* Replace with your desired background color 
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 20px;
-    color: white;
-  }
-  
-  .header-actions {
-    flex: 1;
-    display: flex;
-    justify-content: flex-end;
-  }
-  
-  .expand-button {
-    background: none;
-    border: none;
-    cursor: pointer;
-    font-size: 20px;
-  }
-  
-  .custom-card-media {
-    width: 100%;
-    height: 154px;
-    object-fit: cover;
-  }
-  
-  .custom-card-content {
-    padding: 10px;
-  }
-  
-  .subheader {
-    color: #777;
-    margin-top: -8px;
-  }
-  
-  .card-actions {
-    display: flex;
-    justify-content: space-around;
-    padding: 10px;
-  }
-  
-  .action-button {
-    background: none;
-    border: 1px solid #ccc;
-    padding: 5px 10px;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  .collapse-content {
-    padding: 10px;
-  }
-  
- */
-/* Card.css */
+  display: flex;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  /* max-width: 345px; */
+  margin: 10px;
+  font-family: "Arial", sans-serif; /* Replace with desired font */
+  background-color: #fff; /* Replace with desired background color */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow */
+}
 
-.custom-card {
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    /* max-width: 345px; */
-    margin: 10px;
-    font-family: "Arial", sans-serif; /* Replace with desired font */
-    background-color: #fff; /* Replace with desired background color */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow */
-  }
-  
-  .custom-card:not(:last-child) {
-    margin-bottom: 20px; /* Add margin between cards, except for the last one */
-  }
-  
-  .custom-card-header {
-    /* display: flex; */
-    align-items: center;
-    padding: 10px;
-    margin-top: -28px;
+.custom-card-content {
+  flex: 1;
+  padding: 15px;
+}
 
-  }
-  
-  .price {
-    font-size: 18px;
-    /* color: #FFA500; */
-    font-weight: bold;
-    /* margin-right: 10px; Add some spacing between the name and actions */
-  }
-  .user-name {
-    font-size: 18px;
-    color: #FFA500;
-    font-weight: bold;
-    margin-right: 10px; /* Add some spacing between the name and actions */
-  }
-  .header-actions {
-    flex: 1;
-    display: flex;
-    justify-content: flex-end;
-  }
-  
-  .expand-button {
-    background-color: #FFA500; /* Set the background color to your theme color */
-    color: #fff; /* Set the text color to white (or any other color that contrasts well) */
-    border: none; /* Remove the button border */
-    padding: 3px 10px; /* Add padding for spacing */
-    border-radius: 5px; /* Add border radius to round the button corners */
-    font-size: 15px; /* Adjust the font size as needed */
-    cursor: pointer; /* Add a cursor pointer to indicate interactivity */
-    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out; /* Add smooth transitions */
-  }
-  
-  .expand-button:hover {
-    background-color: #FFA500; /* Change the background color on hover */
-    /* You can adjust the hover color to a slightly lighter/darker shade of your theme color */
-  }
-  
-  .custom-card-media {
-    /* width: 100%; */
-    height: 154px;
-    object-fit: cover;
-    background-color: #f1f1f1; /* Replace with desired background color */
-  }
-  
-  .custom-card-content {
-    padding: 15px;
-  }
-  
-  .subheader {
-    color: #777;
-    margin-top: -8px;
-  }
+.subheader {
+  color: #777;
+  margin-top: -8px;
+  font-size: small;
+}
 
-  .subheader2 {
-    color: #777;
-    margin-top: -8px;
-  }
+.subheader2 {
+  color: #777;
+  margin-top: -8px;
   
-  .card-actions {
-    display: flex;
-    justify-content: space-around;
-    padding: 10px;
-  }
-  
-  .action-button {
-    background-color: #fff; /* Replace with desired background color */
-    color: #333; /* Replace with desired text color */
-    border: 1px solid #ccc;
-    padding: 8px 15px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
-  }
-  
-  .action-button:hover {
-    background-color: #f1f1f1; /* Replace with desired hover background color */
-    color: #555; /* Replace with desired hover text color */
-  }
-  
-  .collapse-content {
-    padding: 15px;
-    background-color: #f9f9f9; /* Replace with desired background color */
-  }
-  
+}
+
+.custom-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px;
+  border-top: 1px solid #ccc;
+}
+
+.price {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.user-name {
+  font-size: 18px;
+  color: #FFA500;
+  font-weight: bold;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+}
+
+.expand-button {
+  background-color: #FFA500;
+  color: #fff;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 5px;
+  font-size: 15px;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+
+.expand-button:hover {
+  background-color: #FFA500;
+}
+
+.collapse-content {
+  padding: 15px;
+  background-color: #f9f9f9;
+}
+
+.card-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.card-content-wrapper {
+  display: flex;
+  width: 100%;
+}
+
+.custom-card-media-container {
+  flex: 1;
+  padding: 15px;
+  max-width: 50%;
+}
+
+.custom-card-media {
+  width: 100%;
+  height: 154px;
+  object-fit: cover;
+  background-color: #f1f1f1; /* Replace with desired background color */
+}

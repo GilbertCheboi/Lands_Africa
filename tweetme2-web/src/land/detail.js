@@ -6,7 +6,7 @@ import Header from './Header';
 import PropertyDetails from './PropertyDetails';
 import Footer from './Footer';
 
-export function ItemDetails({ itemId }) {
+export function ItemDetails ({ itemId }) {
   const [itemDetails, setItemDetails] = useState({});
   const [loading, setLoading] = useState(true);
 
@@ -52,4 +52,4 @@ export function ItemDetails({ itemId }) {
       <Footer />
     </div>
   );
-}
+};

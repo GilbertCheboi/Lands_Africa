@@ -29,22 +29,34 @@ const Footer = () => {
         <div className="footer-right">
           <h3>Follow Us</h3>
           <div className="social-icons">
-            <a href="#" className="icon">
-              <i className="fa fa-facebook"></i>
-            </a>
-            <a href="#" className="icon">
-              <i className="fa fa-twitter"></i>
-            </a>
-            <a href="#" className="icon">
-              <i className="fa fa-linkedin"></i>
-            </a>
-            {/* Add more social media icons as needed */}
+            <ul className="icon-list">
+              <li>
+                <a href="#" className="icon">
+                  <span className="fab fa-facebook"></span>
+                  <span className="social-text">Lands in Africa</span>
+                </a>
+              </li>
+              <li>
+                <a href="#" className="icon">
+                  <span className="fab fa-twitter"></span>
+                  <span className="social-text">@lands_in_africa</span>
+                </a>
+              </li>
+              <li>
+                <a href="#" className="icon">
+                  <span className="fab fa-linkedin"></span>
+                  <span className="social-text">@lands_in_africa</span>
+                </a>
+              </li>
+              {/* <!-- Add more social media icons as list items --> */}
+            </ul>
           </div>
+
         </div>
       </div>
 
       <div className="footer-bottom">
-        <p>&copy; {new Date().getFullYear()}<a href="/Privacy">Lands Africa. All rights reserved.</a></p>
+        <p>&copy; {new Date().getFullYear()}<a href="/Privacy"> Lands Africa. All rights reserved.</a></p>
 
         <p>Designed and Developed by Lands Africa</p>
       </div>
