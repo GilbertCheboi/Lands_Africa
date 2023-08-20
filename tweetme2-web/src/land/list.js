@@ -16,7 +16,7 @@ export function App() {
     try {
 
       const response = await fetch('http://49.13.51.138/api/Land/');
-      // const response = await fetch('http://192.168.0.13:8001/api/Land/');
+
       const data = await response.json();
       console.log(data);
       setItems(data.results);

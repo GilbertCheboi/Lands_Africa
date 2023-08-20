@@ -15,6 +15,9 @@ export function ItemDetails ({ itemId }) {
       console.log("hello world");
       try {
 
+
+
+
         const response = await fetch(`http://49.13.51.138/api/Land/${itemId}/`);
         console.log("hello world");
         if (!response.ok) {
