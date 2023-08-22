@@ -43,11 +43,12 @@ class LandManager(models.Manager):
 class Land(models.Model):
     # Maps to SQL data
     # id = models.AutoField(primary_key=True)
+    name = models.TextField(blank=True, null=True)
     user = models.ForeignKey(User, on_delete=models.CASCADE, related_name="land") 
     country = models.TextField(blank=True, null=True)
     county = models.TextField(blank=True, null=True)
     sub_county = models.TextField(blank=True, null=True)
-    ward = models.TextField(blank=True, null=True)
+    size = models.TextField(blank=True, null=True)
     price = models.TextField(blank=True, null=True)
     realtor = models.TextField(blank=True, null=True)    
     specific_location = models.TextField(blank=True, null=True)
