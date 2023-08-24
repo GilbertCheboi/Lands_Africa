@@ -4,16 +4,26 @@ import './styles.css';
 import "./Header.css";
 import Card from './Card';
 import Header from './Header';
-// import PropertyDetails from './PropertyDetails';
-import { SearchComponent } from './search'; // Import the SearchComponent
+
+function PropertyList({ filteredProperties }) {
+  const propertyCards = filteredProperties.map(property => (
+    <Card key={property.key} property={property} />
+  ));
+
+  return <div>{propertyCards}</div>;
+}
 
 export function App() {
+  const [searchField, setSearchField] = useState("");
   const [items, setItems] = useState([]);
-  const [searchQuery, setSearchQuery] = useState('');
+
+  useEffect(() => {
+    fetchData();
+  }, []);
 
   const fetchData = async () => {
     try {
-      const response = await fetch('http://127.0.0.1:8000/api/Land/');
+      const response = await fetch(`https://landsinafrica.com/api/Land/`);
       const data = await response.json();
       console.log(data);
       setItems(data.results);
@@ -22,52 +32,55 @@ export function App() {
     }
   };
 
-  const cardItems = items.map((item, index) => (
-    <Card
-      id={item.id}
-      key={index}
-      title={item.name}
-      description={`${item.country}, ${item.county}, ${item.specific_location}`}
-      country={item.country}
-      county={item.county}
-      sub_county={item.sub_county}
-      price={item.price}
-      image={item.image}
-      content={item.content}
-      timestamp={item.timestamp}
-      realtor={item.realtor}
-       center_latitude={item.center_latitude}
-       center_longitude={item.center_longitude}
-       pointA_latitude={item.pointA_latitude}
-       pointA_longitude={item.pointA_longitude}
-       pointA1_latitude={item.pointA1_latitude}
-       pointA1_longitude={item.pointA1_longitude}
-       pointB_latitude={item.pointB_latitude}
-       pointB_longitude={item.pointB_longitude}
-       pointC_latitude={item.pointC_latitude}
-       pointC_longitude={item.pointC_longitude}
-       pointD_latitude={item.pointD_latitude}
-       pointD_longitude= {item.pointD_longitude}
-      // Add any other props you want to pass to the Card component
-    />
-  ));
+  const filteredProperties = items.filter(property => {
+    const lowerSearchField = searchField.toLowerCase();
+    const lowerTitle = property.title ? property.title.toLowerCase() : '';
+    const lowerCounty = property.county ? property.county.toLowerCase() : '';
+    const lowerDescription = property.description ? property.description.toLowerCase() : '';
+  const lowerCountry = property.country ? property.country.toLowerCase() : '';
+  const lowerSpecificLocation = property.specific_location ? property.specific_location.toLowerCase() : '';
+  const lowerRealtor = property.realtor ? property.realtor.toLowerCase() : '';
+  
+    const searchRegex = new RegExp(lowerSearchField, 'i'); // 'i' flag for case-insensitive matching
+  
+    return searchRegex.test(lowerTitle) ||
+    searchRegex.test(lowerDescription) ||
+    searchRegex.test(lowerCountry) ||
+    searchRegex.test(lowerSpecificLocation) ||
+    searchRegex.test(lowerCounty) ||
+    searchRegex.test(lowerRealtor)
+  });
+  
 
-  useEffect(() => { 
-    fetchData();
-  }, []);
+  const handleSearch = e => {
+    setSearchField(e.target.value);
+  };
+
+  function renderPropertyList() {
+    return <PropertyList filteredProperties={filteredProperties} />;
+  }
 
   return (
     <div className='main-page'>
       <Header />
       <div className="main-container">
         <div className='side-page '>
-          {/* Render the SearchComponent with the searchQuery prop */}
-          <SearchComponent searchQuery={searchQuery} />
+        <div className="search-container">
+          <input
+            className="search-input"
+            type="search"
+            placeholder="Search..."
+            onChange={handleSearch}
+          />
+        </div>
+          {renderPropertyList()}
+          {/* Render the SearchComponent with the searchQuery prop
+          <SearchComponent searchQuery={searchQuery} /> */}
           {/* Or, render the card items if there is no search query */}
-          {searchQuery.trim() === '' && cardItems}
+          {/* {searchQuery.trim() === '' && cardItems} */}
         </div>
         <div className="map-container">
-          <Map items={searchQuery.trim() === '' ? items : []} />
+          <Map items={filteredProperties} />
         </div>
       </div>
     </div>

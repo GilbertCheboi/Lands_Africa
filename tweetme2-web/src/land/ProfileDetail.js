@@ -9,7 +9,7 @@ export function ProfileDetail   ({ username }) {
   useEffect(() => {
     const fetchProfileDetails = async () => {
       try {
-        const response = await fetch(`http://127.0.0.1:8000/api/profiles/${username}/`);
+        const response = await fetch(`https://landsinafrica.com/api/profiles/${username}/`);
         if (!response.ok) {
           throw new Error('Error fetching profile details');
         }
