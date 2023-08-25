@@ -15,7 +15,7 @@ export function App() {
   const fetchData = async () => {
     try {
 
-      const response = await fetch('http://49.13.51.138/api/Land/');
+      const response = await fetch('https://landsinafrica.com/api/Land/');
 
       const data = await response.json();
       console.log(data);
