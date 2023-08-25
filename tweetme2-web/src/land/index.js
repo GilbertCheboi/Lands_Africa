@@ -1,6 +1,5 @@
 import {App} from './list'
 import {ItemDetails} from './detail'
-import { SearchComponent } from './search'
 import { AboutPage } from './About'
 import { Contact } from './Contact'
 import {Login} from './login'
@@ -14,12 +13,13 @@ export {
 
     App,
     ItemDetails,
-    SearchComponent,
     AboutPage,
     Contact,
     Register,
     Login,
     ProfileDetail,
     PrivacyPage,
+
+
 
 }

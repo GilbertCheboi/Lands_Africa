@@ -11,20 +11,13 @@ const PropertyDetails = ({ itemDetails }) => {
   const specific_location = itemDetails.specific_location
   const county = itemDetails.county
 
-  const propertyInfo = {
-    lotsize: "0.5",
-    address: "Kilimani Area, Nairobi",
-    
-    monthlyCost: "KES 250,000 (estimated)",
-  };
-
   // Static data for agent information
   const agentInfo = {
-    agentName: "Jane Muthoni",
-    agencyName: "Afya Realty Kenya",
-    phoneNumber: "+254 712 345 678",
-    email: "info@afyarealty.co.ke",
-    licenseNumber: "License #KR.2023456",
+    agentName: "Eugene",
+    agencyName: "Eugene",
+    phoneNumber: "+254 700 236 628",
+    email: "info@eugenelands.co.ke",
+    // licenseNumber: "License #KR.2023456",
   };
 
   const mapContainerStyle = {
@@ -151,17 +144,18 @@ const PropertyDetails = ({ itemDetails }) => {
             </GoogleMap>
           </LoadScript>
           <p className="property-info-monthly-cost text-only">
-            Estimated payment {propertyInfo.monthlyCost}
+            {/* Estimated payment {propertyInfo.monthlyCost} */}
           </p>
 
           {/* Property Info - Features */}
           <div className="property-info-features plain-list flex">
             <div className="divider"></div>
             <span className="property-info-feature lotsize">
+              <span className="feature-lotsize">Lot size: </span>
               <span className="property-info-feature-detail">
-                {propertyInfo.lotsize}
+                {/* {propertyInfo.lotsize} */}
               </span>
-              <span className="feature-lotsize">acres Lot</span>
+              {/* <span className="feature-lotsize">acres Lot</span> */}
             </span>
             <div className="divider"></div>
           </div>
@@ -175,7 +169,7 @@ const PropertyDetails = ({ itemDetails }) => {
         >
           <div className="about-this-home">
             <h2 className="ldp-description-heading ldp-heading">
-              About This Home
+              About This Land
             </h2>
             <div className="ldp-description-text-container truncate-container">
               <p id="ldp-description-text" className="ldp-description-text">
@@ -189,7 +183,7 @@ const PropertyDetails = ({ itemDetails }) => {
             aria-controls="ldp-description-text"
             type="button"
           >
-            See All
+            See More
           </button>
 
           <div className="property-image" style={{ width: "100%", height: "400px", overflow: "hidden" }}>
@@ -215,18 +209,21 @@ const PropertyDetails = ({ itemDetails }) => {
                 <p className="agent-information-container">
                   <span className="agent-information agent-information-agency-name">
                     {agentInfo.agencyName}
+                    <span>  </span>
                   </span>
                   <span>
                     <a
                       className="agent-information agent-information-phone-number standard-link text-only"
-                      href="tel:(702) 367-2323"
+                      href="tel:(0722) 232-229"
                     >
-                      {agentInfo.phoneNumber}
+                    {agentInfo.phoneNumber}
                     </a>
                   </span>
+                  <p>
                   <span className="agent-information agent-information-email">
                     {agentInfo.email}
                   </span>
+                  </p>
                   <span className="agent-information agent-information-license-number">
                     {agentInfo.licenseNumber}
                   </span>
@@ -247,7 +244,7 @@ const PropertyDetails = ({ itemDetails }) => {
 
    {/* Realtor Information Box */}
    <div className="realtor-info-box">
-        <h3>Realtor Information</h3>
+        <h5>Realtor Information</h5>
         <div className="agent-avatar">
           <img
             src="/path/to/avatar.jpg" // Replace with the URL of the avatar image
@@ -266,5 +263,5 @@ const PropertyDetails = ({ itemDetails }) => {
       </div>
   </main>
 );
-                };
+};
 export default PropertyDetails;
