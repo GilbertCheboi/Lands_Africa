@@ -1,6 +1,8 @@
   import React from 'react';
   import { GoogleMap, Marker, LoadScript, Polyline} from "@react-google-maps/api";
   import './styles.css';
+  import MarkerClusterer from 'react-google-maps/lib/components/addons/MarkerClusterer'; // Import the MarkerClusterer module
+
 
   export function Map({ items }) {
 
@@ -69,12 +71,14 @@
           center={coordinates1[2]} // Set the center to the first marker coordinates
           zoom={8}
         >
-          <div>
           {coordinates1.map((marker, index, item) => (
             <Marker
               key={index}
               position={{ lat: marker.lat, lng: marker.lng }}
               title={marker.title}
+              icon={{
+                url: "http://maps.google.com/mapfiles/ms/icons/yellow-dot.png"
+              }}
               onClick={() => handleLink(items[index])} 
               
             />
@@ -90,7 +94,6 @@
               }}
             />
           ))}
-          </div>
         </GoogleMap>
       </LoadScript>
     );

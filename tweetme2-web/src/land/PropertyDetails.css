@@ -14,6 +14,8 @@
 .property-info-price-and-icons {
   display: flex;
   align-items: center;
+  align-items: center;
+  text-align: center;
 }
 
 .property-info-price {
@@ -139,7 +141,12 @@
   margin-top: 50px;
   background-color: #f0f0f0;
   border-radius: 4px;
-  /* Add your styles for realtor information box here */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.agent-info-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
 }
 
 .agent-avatar img {
@@ -147,11 +154,55 @@
   height: 50px;
   border-radius: 50%;
   margin-bottom: 10px;
+  
+}
+.agent-details {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  padding: 0 20px;
+  flex: 1;
 }
 
 .agent-name {
   font-weight: bold;
+  margin-bottom: 5px;
 }
+
+.agent-description {
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.agent-contacts {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.agent-contacts strong {
+  font-weight: bold;
+}
+
+.agent-contacts a {
+  font-weight: bold;
+  color: #007bff; /* Adjust link color as needed */
+  text-decoration: none;
+}
+
+.call-button {
+  margin-left: 10px;
+  padding: 5px 10px;
+  background-color: #007bff; /* Adjust button color as needed */
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.call-button:hover {
+  background-color: #0056b3; /* Adjust button hover color as needed */
+}
+
 /* Rest of the styling for other sections and elements as needed */
 
 
@@ -170,12 +221,19 @@
 
 /* Media query for small screens */
 @media (max-width: 640px) {
+  .main-content {
+    grid-template-columns: 1fr; /* Single column layout on small screens */
+  }
   .ldp-grid-container {
     grid-template-columns: 1fr; /* Change to a single column layout */
     width: 100%;
   }
 
   .realtor-info-box {
-    display: none; /* Hide the map container */
+    position: relative; /* Change to relative positioning */
+    width: 100%; /* Adjust the width to full width on small screens */
+    top: auto; /* Reset positioning */
+    right: 0; /* Adjust positioning */
+    margin-top: 20px; /* Add margin to separate from content */
   }
 }
