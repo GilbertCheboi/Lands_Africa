@@ -7,6 +7,7 @@ import { AboutPage, App, ItemDetails, SearchComponent, Register, Login, ProfileD
 import * as serviceWorker from './serviceWorker';
 import { Contact } from './land/Contact';
 import { ProfileDetails } from './land/PropertyDetails';
+import Searchme from './land/Searchme';
 
 const e = React.createElement;
 const tweetsEl = document.getElementById("tweetme-2");
@@ -48,11 +49,15 @@ const login = document.getElementById("tweetme-2-login");
 if (login) {
   ReactDOM.render(e(Login, login.dataset), login);
 }
+// const seachme = document.getElementById("tweetme-2-seachme");
+// if (Searchme) {
+//   ReactDOM.render(e(Searchme, seachme.dataset), seachme);
+// }
 
-const searchEl = document.getElementById("search");
-if (searchEl) {
-  ReactDOM.render(e(SearchComponent, searchEl.dataset), searchEl);
-}
+// const searchEl = document.getElementById("search");
+// if (searchEl) {
+//   ReactDOM.render(e(SearchComponent, searchEl.dataset), searchEl);
+
 const tweetDetailElements = document.querySelectorAll(".tweetme-2-detail")
 
 tweetDetailElements.forEach(container=> {

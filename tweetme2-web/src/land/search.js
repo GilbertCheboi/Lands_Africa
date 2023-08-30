@@ -48,18 +48,32 @@ export function SearchComponent({ searchQuery }) {
     />
   ));
 
-  return (
+    return (
     <div>
       <form className='search-container'>
         <input
+<<<<<<< HEAD
         type="text"
         value={query}
         onChange={(e) => setQuery(e.target.value)} // <-- Update the state with setQuery
         placeholder="Search..."
         className="search-data"
       />
+=======
+          type="text"
+          value={query}
+          onChange={(e) => setQuery(e.target.value)} // <-- Update the 
+state with setQuery
+          placeholder="Search..."
+        />
+>>>>>>> a9239f94900303c171c397f6553e00bed4df48b3
       </form>
-      {cardItems}
+      {cardItems} {/* Assuming cardItems is defined and contains JSX 
+elements */}
     </div>
   );
+<<<<<<< HEAD
 }
+=======
+  }
+>>>>>>> a9239f94900303c171c397f6553e00bed4df48b3

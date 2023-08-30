@@ -1,0 +1,92 @@
+/* Searchme.css */
+
+/* Container for the whole section */
+.garamond {
+    font-family: "Garamond", serif;
+    text-align: center;
+  }
+  
+  /* Header style */
+  .navy {
+    color: navy;
+  }
+  
+  /* Input box style */
+  .bb {
+    border-bottom: 1px solid #ccc;
+  }
+  
+  /* Card container style */
+  .tc {
+    text-align: center;
+  }
+  
+  /* Card style */
+  .bg-light-green {
+    background-color: lightgreen;
+  }
+  
+  .dib {
+    display: inline-block;
+  }
+  
+  .br3 {
+    border-radius: 0.5rem;
+  }
+  
+  .pa3 {
+    padding: 1rem;
+  }
+  
+  .ma2 {
+    margin: 0.5rem;
+  }
+  
+  .bw2 {
+    border-width: 0.25rem;
+  }
+  
+  .shadow-5 {
+    box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.2);
+  }
+  
+  .br-100 {
+    border-radius: 50%;
+  }
+  
+  .h3 {
+    height: 3rem;
+  }
+  
+  .w3 {
+    width: 3rem;
+  }
+  
+  /* Scrollable container style */
+  .scroll-container {
+    overflow-y: scroll;
+    height: 70vh;
+  }
+  
+  /* Input box style */
+  .pa3 {
+    padding: 0.75rem;
+  }
+  
+  .bb {
+    border-bottom: 1px solid #ccc;
+  }
+  
+  .br3 {
+    border-radius: 0.375rem;
+  }
+  
+  .bg-lightest-blue {
+    background-color: #e0f7fa;
+  }
+  
+  /* Header style */
+  .f2 {
+    font-size: 1.5rem;
+  }
+  
