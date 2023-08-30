@@ -54,6 +54,7 @@ export function SearchComponent({ searchQuery }) {
         <input
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         type="text"
         value={query}
         onChange={(e) => setQuery(e.target.value)} // <-- Update the state with setQuery
@@ -63,6 +64,8 @@ export function SearchComponent({ searchQuery }) {
 =======
 =======
 >>>>>>> a9239f94900303c171c397f6553e00bed4df48b3
+=======
+>>>>>>> a9239f94900303c171c397f6553e00bed4df48b3
           type="text"
           value={query}
           onChange={(e) => setQuery(e.target.value)} // <-- Update the 
@@ -70,6 +73,9 @@ state with setQuery
           placeholder="Search..."
         />
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> a9239f94900303c171c397f6553e00bed4df48b3
+=======
 >>>>>>> a9239f94900303c171c397f6553e00bed4df48b3
 =======
 >>>>>>> a9239f94900303c171c397f6553e00bed4df48b3
@@ -80,7 +86,11 @@ elements */}
   );
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
+=======
+  }
+>>>>>>> a9239f94900303c171c397f6553e00bed4df48b3
 =======
   }
 >>>>>>> a9239f94900303c171c397f6553e00bed4df48b3

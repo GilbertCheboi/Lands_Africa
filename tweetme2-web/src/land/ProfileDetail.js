@@ -11,6 +11,12 @@ export function ProfileDetail   ({ username }) {
       try {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> a9239f94900303c171c397f6553e00bed4df48b3
 =======
 
 
