@@ -69,7 +69,7 @@
         <GoogleMap
           mapContainerStyle={mapContainerStyle}
           center={coordinates1[2]} // Set the center to the first marker coordinates
-          zoom={8}
+          zoom={7}
         >
           {coordinates1.map((marker, index, item) => (
             <Marker

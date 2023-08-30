@@ -16,7 +16,7 @@ export function ItemDetails ({ itemId }) {
       try {
 
 
-        const response = await fetch(`https://landsinafrica.com//api/Land/${itemId}/`);
+        const response = await fetch(`https://landsinafrica.com/api/Land/${itemId}/`);
 
         console.log("hello world");
         if (!response.ok) {
