@@ -18,8 +18,11 @@ export function ItemDetails ({ itemId }) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         const response = await fetch(`https://landsinafrica.com/api/Land/${itemId}/`);
 =======
+=======
+>>>>>>> a9239f94900303c171c397f6553e00bed4df48b3
 =======
 >>>>>>> a9239f94900303c171c397f6553e00bed4df48b3
 =======
@@ -31,6 +34,9 @@ export function ItemDetails ({ itemId }) {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> a9239f94900303c171c397f6553e00bed4df48b3
+=======
 >>>>>>> a9239f94900303c171c397f6553e00bed4df48b3
 =======
 >>>>>>> a9239f94900303c171c397f6553e00bed4df48b3

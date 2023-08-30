@@ -55,6 +55,7 @@ export function SearchComponent({ searchQuery }) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         type="text"
         value={query}
         onChange={(e) => setQuery(e.target.value)} // <-- Update the state with setQuery
@@ -62,6 +63,8 @@ export function SearchComponent({ searchQuery }) {
         className="search-data"
       />
 =======
+=======
+>>>>>>> a9239f94900303c171c397f6553e00bed4df48b3
 =======
 >>>>>>> a9239f94900303c171c397f6553e00bed4df48b3
 =======
@@ -74,6 +77,9 @@ state with setQuery
         />
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> a9239f94900303c171c397f6553e00bed4df48b3
+=======
 >>>>>>> a9239f94900303c171c397f6553e00bed4df48b3
 =======
 >>>>>>> a9239f94900303c171c397f6553e00bed4df48b3
@@ -87,7 +93,11 @@ elements */}
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
+=======
+  }
+>>>>>>> a9239f94900303c171c397f6553e00bed4df48b3
 =======
   }
 >>>>>>> a9239f94900303c171c397f6553e00bed4df48b3
