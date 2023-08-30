@@ -21,7 +21,7 @@ export function SearchComponent({ searchQuery }) {
 
   const fetchSearchResults = async () => {
     try {
-      const response = await fetch(`http://127.0.0.1:8000/search?q=${query}`);
+      const response = await fetch(`https://landsinafrica.com/search?q=${query}`);
       const data = await response.json();
       console.log(data);
       setSearchResults(data);
@@ -56,13 +56,6 @@ export function SearchComponent({ searchQuery }) {
         value={query}
         onChange={(e) => setQuery(e.target.value)} // <-- Update the state with setQuery
         placeholder="Search..."
-<<<<<<< HEAD
-      />
-      {cardItems}
-    </div>
-  );
-}
-=======
         className="search-data"
       />
       </form>
@@ -70,4 +63,3 @@ export function SearchComponent({ searchQuery }) {
     </div>
   );
 }
->>>>>>> 5ecb81139f7557700353f23b7fe4cf926e05660d
