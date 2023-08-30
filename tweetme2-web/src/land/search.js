@@ -53,6 +53,7 @@ export function SearchComponent({ searchQuery }) {
       <form className='search-container'>
         <input
 <<<<<<< HEAD
+<<<<<<< HEAD
         type="text"
         value={query}
         onChange={(e) => setQuery(e.target.value)} // <-- Update the state with setQuery
@@ -60,12 +61,17 @@ export function SearchComponent({ searchQuery }) {
         className="search-data"
       />
 =======
+=======
+>>>>>>> a9239f94900303c171c397f6553e00bed4df48b3
           type="text"
           value={query}
           onChange={(e) => setQuery(e.target.value)} // <-- Update the 
 state with setQuery
           placeholder="Search..."
         />
+<<<<<<< HEAD
+>>>>>>> a9239f94900303c171c397f6553e00bed4df48b3
+=======
 >>>>>>> a9239f94900303c171c397f6553e00bed4df48b3
       </form>
       {cardItems} {/* Assuming cardItems is defined and contains JSX 
@@ -73,7 +79,11 @@ elements */}
     </div>
   );
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
+=======
+  }
+>>>>>>> a9239f94900303c171c397f6553e00bed4df48b3
 =======
   }
 >>>>>>> a9239f94900303c171c397f6553e00bed4df48b3
