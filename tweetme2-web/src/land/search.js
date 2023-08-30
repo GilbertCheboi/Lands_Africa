@@ -52,58 +52,18 @@ export function SearchComponent({ searchQuery }) {
     <div>
       <form className='search-container'>
         <input
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-        type="text"
-        value={query}
-        onChange={(e) => setQuery(e.target.value)} // <-- Update the state with setQuery
-        placeholder="Search..."
-        className="search-data"
-      />
-=======
-=======
->>>>>>> a9239f94900303c171c397f6553e00bed4df48b3
-=======
->>>>>>> a9239f94900303c171c397f6553e00bed4df48b3
-=======
->>>>>>> a9239f94900303c171c397f6553e00bed4df48b3
           type="text"
           value={query}
           onChange={(e) => setQuery(e.target.value)} // <-- Update the 
 state with setQuery
           placeholder="Search..."
         />
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> a9239f94900303c171c397f6553e00bed4df48b3
-=======
->>>>>>> a9239f94900303c171c397f6553e00bed4df48b3
-=======
->>>>>>> a9239f94900303c171c397f6553e00bed4df48b3
-=======
->>>>>>> a9239f94900303c171c397f6553e00bed4df48b3
+
       </form>
       {cardItems} {/* Assuming cardItems is defined and contains JSX 
 elements */}
     </div>
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-}
-=======
+
   }
->>>>>>> a9239f94900303c171c397f6553e00bed4df48b3
-=======
-  }
->>>>>>> a9239f94900303c171c397f6553e00bed4df48b3
-=======
-  }
->>>>>>> a9239f94900303c171c397f6553e00bed4df48b3
-=======
-  }
->>>>>>> a9239f94900303c171c397f6553e00bed4df48b3
+

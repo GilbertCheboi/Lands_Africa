@@ -25,32 +25,7 @@ export function App() {
   const fetchData = async () => {
     try {
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
       const response = await fetch('https://landsinafrica.com/api/Land/');
-      // const response = await fetch('http://192.168.0.13:8001/api/Land/');
-=======
-
-      const response = await fetch(`https://landsinafrica.com/api/Land/`);
-
->>>>>>> a9239f94900303c171c397f6553e00bed4df48b3
-=======
-
-      const response = await fetch(`https://landsinafrica.com/api/Land/`);
-
->>>>>>> a9239f94900303c171c397f6553e00bed4df48b3
-=======
-
-      const response = await fetch(`https://landsinafrica.com/api/Land/`);
-
->>>>>>> a9239f94900303c171c397f6553e00bed4df48b3
-=======
-
-      const response = await fetch(`https://landsinafrica.com/api/Land/`);
-
->>>>>>> a9239f94900303c171c397f6553e00bed4df48b3
       const data = await response.json();
       console.log(data);
       setItems(data.results);
