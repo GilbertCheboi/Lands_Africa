@@ -17,8 +17,9 @@ export function ItemDetails ({ itemId }) {
 
 
 
-
         const response = await fetch(`https://landsinafrica.com/api/Land/${itemId}/`);
+
+
         console.log("hello world");
         if (!response.ok) {
           throw new Error('Error fetching item details');

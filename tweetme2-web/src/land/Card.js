@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './Card.css'; // Create a separate CSS file for styling if desired
 
-const Card = ({ title, description, image, price, content, timestamp, realtor, id }) => {
+const Card = ({ property }) => {
   const [expanded, setExpanded] = useState(false);
   const [showPreview, setShowPreview] = useState(true);
 
@@ -9,6 +9,21 @@ const Card = ({ title, description, image, price, content, timestamp, realtor, i
     setExpanded(!expanded);
     setShowPreview(!expanded); // Toggle the showPreview state on button click
   };
+
+  
+  const {
+    id,
+    image,
+    title,
+    price,
+    timestamp,
+    country,
+    county,
+    specific_location,
+    description,
+    content,
+    realtor,
+  } = property;
 
   const handleLink = () => {
     // Check if the item object exists and has the 'id' property
@@ -34,10 +49,10 @@ const Card = ({ title, description, image, price, content, timestamp, realtor, i
           <p className="subheader2">
             <i className="fas fa-map-marker-alt"></i>
             <span className="location-icon">  </span>
-            {description}
-          </p>
+            {county} - {specific_location}
+          </p> 
           <p>
-          {showPreview ? content.slice(0, 70) + "..." : content.slice(0, 70)}
+          {content && (showPreview ? content.slice(0, 70) + "..." : content.slice(0, 70))}
           </p>
         </div>
       </div>
