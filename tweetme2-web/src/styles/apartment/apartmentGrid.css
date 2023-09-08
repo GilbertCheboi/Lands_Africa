@@ -1,0 +1,88 @@
+/* ApartmentGrid.css */
+.apartment-grid-container{
+  margin-bottom: 20px;
+}
+.apartment-grid {
+  padding-left: 30px;
+  padding-right: 30px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  row-gap: 16px; /* Adjust the row gap as needed */
+  margin-top: 24px; /* Adjust the top margin as needed */
+
+  
+
+  /* Media query for larger screens (adjust the breakpoint as needed) */
+  @media screen and (min-width: 768px) {
+    grid-template-columns: repeat(3, 1fr); /* Display 3 items per row on larger screens */
+  }
+}
+/* ApartmentGrid.css */
+.apartment-title {
+  font-family: Arial, sans-serif;
+  font-size: 24px;
+  font-weight: bold;
+  color: #ffa500;
+  /* margin-left: 50px; */
+  margin: 10px;
+  padding: 10px; 
+}
+.feature i {
+  color: #666666; /* Change the color to your preferred color */
+}
+/* ApartmentGrid.css */
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.pagination button {
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin: 0 5px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.pagination button:hover {
+  background-color: #0056b3;
+}
+
+.pagination button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.pagination span {
+  margin: 0 10px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* orange: {
+    100: "#ffedcc",
+    200: "#ffdb99",
+    300: "#ffc966",
+    400: "#ffb733",
+    500: "#ffa500",
+    600: "#cc8400",
+    700: "#996300",
+    800: "#664200",
+    900: "#332100"
+}, */
+
+/* black: {
+    100: "#e6e6e6",
+    200: "#cccccc",
+    300: "#b3b3b3",
+    400: "#999999",
+    500: "#808080",
+    600: "#666666",
+    700: "#4d4d4d",
+    800: "#333333",
+    900: "#1a1a1a"
+}, */

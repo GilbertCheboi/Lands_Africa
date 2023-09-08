@@ -1,0 +1,191 @@
+
+
+/* Main container styles */
+.main-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  .ldp-grid-container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    width: 100%;
+    margin-top: 20px;
+  }
+  
+  .profile-column-left,
+  .profile-column-right {
+    flex: 1;
+    padding: 10px;
+  }
+  
+  /* Property Info styles */
+  .property-info-price-and-icons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .property-info-price {
+    color: #ff9900; /* Orange color for price */
+  }
+  
+  .property-info-status-pill-container {
+    /* Add styles for property status pill if needed */
+  }
+  
+  .property-info-address-and-media-types {
+    margin-bottom: 20px;
+  }
+  
+  .property-info-address-main {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  .property-info-address-citystatezip {
+    font-size: 16px;
+  }
+  
+  .property-info-neighborhood {
+    font-size: 16px;
+  }
+  
+  /* Property Features styles */
+  .property-info-features {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    margin-top: 10px;
+  }
+  
+  .feature-lotsize {
+    font-weight: bold;
+  }
+  
+  .divider {
+    margin: 0 10px;
+    font-weight: bold;
+  }
+  
+  /* Description styles */
+  .ldp-description-container {
+    margin-top: 20px;
+  }
+  
+  .ldp-description-heading {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .ldp-description-text-container {
+    max-height: 200px; /* Adjust as needed */
+    overflow: hidden;
+  }
+  
+  .ldp-description-text {
+    font-size: 16px;
+  }
+  
+  /* Property Image styles */
+  .property-image {
+    margin-top: 20px;
+    max-height: 400px; /* Adjust as needed */
+    overflow: hidden;
+  }
+  
+  /* Agent Information styles */
+  .agent-information-wrapper {
+    margin-top: 20px;
+  }
+  
+  .listing-agent-title {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .agent-information-fullname {
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: underline;
+    color: #007bff; /* Blue color for links */
+  }
+  
+  .agent-information-container {
+    font-size: 16px;
+    margin-bottom: 5px;
+  }
+  
+  .agent-information-agency-name {
+    font-weight: bold;
+  }
+  
+  .agent-information-phone-number,
+  .agent-information-email {
+    color: #007bff; /* Blue color for links */
+  }
+  
+  .agent-information-license-number {
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 5px;
+  }
+  
+  /* Realtor Information Box styles */
+  .realtor-info-box {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #f8f9fa; /* Light gray background */
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  .agent-avatar img {
+    width: 100px; /* Adjust as needed */
+    height: 100px; /* Adjust as needed */
+    object-fit: cover;
+    border-radius: 50%;
+  }
+  
+  .agent-details {
+    margin-left: 20px;
+  }
+  
+  .agent-name {
+    font-size: 20px;
+    font-weight: bold;
+  }
+  
+  .agent-description {
+    margin-top: 10px;
+    font-size: 16px;
+  }
+  
+  .agent-contacts {
+    margin-top: 10px;
+    font-weight: bold;
+  }
+  
+  .call-button {
+    margin-left: 10px;
+    padding: 5px 10px;
+    background-color: #007bff; /* Blue color for button */
+    color: #fff; /* White text color */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .call-button:hover {
+    background-color: #0056b3; /* Darker blue color on hover */
+  }
+  

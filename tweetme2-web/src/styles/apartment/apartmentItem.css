@@ -1,0 +1,87 @@
+.house-card-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .house-card {
+    width: 350px;
+    background-color: white;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+  }
+  
+  .house-image {
+    height: 170px;
+    object-fit: cover;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+  
+  .house-details {
+    padding: 16px;
+  }
+  
+  .house-price {
+    font-weight: bold;
+    font-size: 18px;
+    color:#ffc966;
+  }
+  
+  .house-price-amount {
+    font-size: 18px;
+  }
+  
+  .house-price-month {
+    font-size: 12px;
+    color: grey;
+  }
+  
+  .house-name {
+    font-size: 16px;
+    letter-spacing: 1px;
+  }
+  
+  .house-address {
+    font-size: 13px;
+    color: grey;
+  }
+  
+  .divider {
+    margin: 10px 0;
+    border: 0;
+    border-top: 1px solid #ccc;
+  }
+  
+  .house-features {
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  .feature {
+    display: flex;
+    align-items: center;
+  }
+  
+  .icon {
+    margin-right: 5px;
+  }
+  
+  .bed-icon::before {
+    content: '\f236'; /* Replace with your bed icon */
+    color: #ffa500;
+  }
+  
+  .bath-icon::before {
+    content: '\f2cd'; /* Replace with your bath icon */
+    color: #ffa500;
+  }
+  
+  .area-icon::before {
+    content: '\f042'; /* Replace with your area icon */
+    color: #ffa500;
+  }
+  

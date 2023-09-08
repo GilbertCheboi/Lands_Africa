@@ -2,12 +2,14 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import { ProfileBadgeComponent } from './profiles';
-import { AboutPage, App, ItemDetails, SearchComponent, Register, Login, ProfileDetail, PrivacyPage } from './land';
+import { AboutPage, App, ItemDetails, SearchComponent, Register, Login, ProfileDetail } from './land';
 
 import * as serviceWorker from './serviceWorker';
 import { Contact } from './land/Contact';
 import { ProfileDetails } from './land/PropertyDetails';
 import Searchme from './land/Searchme';
+import Apartment from './apartment/Apartment';
+import ApartmentDetail from './apartment/ApartmentDetail';
 
 const e = React.createElement;
 const tweetsEl = document.getElementById("tweetme-2");
@@ -19,6 +21,10 @@ const detail = document.getElementById("tweetme-2-detail1");
 if (detail) {
   ReactDOM.render(e(ItemDetails, detail.dataset), detail);
 }
+const apartmentdetail = document.getElementById("tweetme-2-apartment-detail");
+if (apartmentdetail) {
+  ReactDOM.render(e(ApartmentDetail, apartmentdetail.dataset), apartmentdetail);
+}
 
 const profiledetail = document.getElementById("profile-2-detail");
 if (profiledetail) {
@@ -28,11 +34,6 @@ if (profiledetail) {
 const about = document.getElementById("tweetme-2-about");
 if (about) {
   ReactDOM.render(e(AboutPage, about.dataset), about);
-}
-
-const privacy = document.getElementById("tweetme-2-privacy");
-if (privacy) {
-  ReactDOM.render(e(PrivacyPage, privacy.dataset), privacy);
 }
 
 const contact = document.getElementById("tweetme-2-contact");
@@ -48,6 +49,10 @@ if (register) {
 const login = document.getElementById("tweetme-2-login");
 if (login) {
   ReactDOM.render(e(Login, login.dataset), login);
+}
+const apartment = document.getElementById("tweetme-2-apartment");
+if (apartment) {
+  ReactDOM.render(e(Apartment, apartment.dataset), apartment);
 }
 // const seachme = document.getElementById("tweetme-2-seachme");
 // if (Searchme) {
