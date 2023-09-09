@@ -29,7 +29,13 @@ from accounts.views import (
     logout_view,
     register_view,
 )
-
+from apartments.views import (
+    apartments_view,
+    apartment_detail_view,
+    contact,
+    about,
+    privacy,
+)
 
 from Land.views import (
     home_view,
@@ -37,19 +43,17 @@ from Land.views import (
     contact,
     about,
     privacy,
-    
- 
 )
+
+
 from Search.views import (
     search,
-    
-    
- 
+
 )
 
 urlpatterns = [
     #path('api/', include('accounts.urls')),
-    
+
     path('', home_view),
     path('', include('Search.urls')), 
     path('login/', login_view),
@@ -62,7 +66,9 @@ urlpatterns = [
     path('Privacy/', privacy),
     path('Contact/', contact),
     path('Land/<int:item_id>/', land_detail_view),
+    path('apartments/<int:item_id>/', land_detail_view),
     path('api/accounts/', include('accounts.api.urls')),
+    path('api/apartments/', include('apartments.api.urls')),
     path('api/Land/', include('Land.api.urls')),
     re_path(r'api/profiles?/', include('profiles.api.urls')),
 ]

@@ -30,7 +30,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.AutoField'
 DEBUG = True
 
 ALLOWED_HOSTS = ['landsinafrica.com','49.13.51.138','192.168.0.15', '192.168.0.13','127.0.0.1','192.168.100.27', '172.31.26.131', '.cfe.sh', 'localhost']
-CSRF_TRUSTED_ORIGINS = ['https://gilscore.azurewebsites.net']
+CSRF_TRUSTED_ORIGINS = ['https://landsinafrica.com']
 
 #ALLOWED_HOSTS = ['SportsApp.eba-h3jtbm88.us-west-2.elasticbeanstalk.com']
 
@@ -54,9 +54,10 @@ INSTALLED_APPS = [
     'knox',
     # internal
     'accounts',
+    'apartments',
     'profiles',
     'Land',
-   "Search",
+    "Search",
     # media/static storage
     'storages',
     'django_extensions',
@@ -102,19 +103,14 @@ WSGI_APPLICATION = 'tweetme2.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': 'mydatabase',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'lands',
+        'USER': 'myprojectuser',
+        'PASSWORD': '30230192Gilly!',
+        'HOST': 'localhost',
+        'PORT': '',
     }
 }
-# DATABASES = {
-#     'default': {
-#         'ENGINE':'django.db.backends.postgresql',
-#         'NAME':'django',
-#         'USER':'Gillykim',
-#         'PASSWORD':'30230192Gilly!',
-#         'HOST':'localhost'
-#     }
-# }
 
 #AUTH_USER_MODEL = 'accounts.User'
 

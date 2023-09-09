@@ -2,14 +2,14 @@ from email.mime import image
 from django.conf import settings
 from rest_framework import serializers
 from profiles.serializers import PublicProfileSerializer
-from .models import Land
+from .models import apartment
 from django.contrib.humanize.templatetags.humanize import naturaltime
 
 
 MAX_TWEET_LENGTH = settings.MAX_TWEET_LENGTH
 TWEET_ACTION_OPTIONS = settings.TWEET_ACTION_OPTIONS
 
-class LandActionSerializer(serializers.Serializer):
+class ApartmentActionSerializer(serializers.Serializer):
     id = serializers.IntegerField()
     action = serializers.CharField()
     content = serializers.CharField(allow_blank=True, required=False)
@@ -22,12 +22,12 @@ class LandActionSerializer(serializers.Serializer):
         return value
 
 
-class LandCreateSerializer(serializers.ModelSerializer):
+class ApartmentCreateSerializer(serializers.ModelSerializer):
     user = PublicProfileSerializer(source='user.profile', read_only=True) # serializers.SerializerMethodField(read_only=True)
     likes = serializers.SerializerMethodField(read_only=True)
     #image = serializers.SerializerMethodField()
     class Meta:
-        model = Land
+        model = apartment
         fields = ['user', 
                   'id', 
                   'content', 
@@ -51,12 +51,13 @@ class LandCreateSerializer(serializers.ModelSerializer):
   
 
 
-class LandSerializer(serializers.ModelSerializer):
+class ApartmentSerializer(serializers.ModelSerializer):
     user = PublicProfileSerializer(source='user.profile', read_only=True)
     likes = serializers.SerializerMethodField(read_only=True)
     class Meta:
-        model = Land
+        model = apartment
         fields = ['user', 
+                  'name',
                   'id', 
                   'content', 
                   'likes',
@@ -64,24 +65,52 @@ class LandSerializer(serializers.ModelSerializer):
                   'image1', 
                   'image2',
                   'image3', 
+                  'image4',
+                  'image5',
+                  'image6',
+                  'image7',
+                  'image8',
+                  'image9',
+                  'image10',
+                  'image11',
+                  'image12',
+                  'image13',
+                  'image14',
+                  'image14',
+                  'image15',
+                  'image16',
+                  'image17',
+                  'image18',
+                  'image19',
+                  'image20',
                   'center_longitude', 
                   'center_latitude', 
-                  'pointA_latitude',
-                  'pointA_longitude',
-                  'pointB_latitude', 
-                  'pointB_longitude',
-                  'pointC_latitude',
-                  'pointC_longitude',
-                  'pointD_latitude',
-                  'pointD_longitude',
-                  'pointA1_latitude',
-                  'pointA1_longitude',
                   'country', 
                   'county', 
-                  'sub_county', 
-                  'ward', 
+                  'type', 
+                  'beds', 
+                  'baths',
+                  'cash_price',
+                  'mortgage_plan',
+                  'instalment_price',
+                  'size',
+                  'type',
+                  'amenities1',
+                  'amenities2',
+                  'amenities3',
+                  'amenities4',
+                  'amenities5',
+                  'amenities6',
+                  'amenities7',
+                  'amenities8',
+                  'amenities9',
+                  'amenities10',
+                  'amenities11',
+                  'amenities12',
+                  'amenities13',
+                  'amenities14',
+                  'amenities15',
                   'specific_location',
-                  'price',
                   'realtor',
                   'timestamp']
 
@@ -93,5 +122,4 @@ class LandSerializer(serializers.ModelSerializer):
         representation = super().to_representation(instance)
         representation['timestamp'] = naturaltime(instance.timestamp)
         return representation
-
 
