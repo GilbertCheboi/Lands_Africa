@@ -2,7 +2,7 @@ import React from "react";
 import { GoogleMap, Marker, LoadScript } from "@react-google-maps/api";
 import './../styles/apartment/apartmentDetail.css';
 
-const ApartmentDetail = ({ apartment }) => {
+const ApartmentDetail = ({ item }) => {
   const containerStyle = {
     height: "400px",
     width: "100%",
@@ -10,8 +10,8 @@ const ApartmentDetail = ({ apartment }) => {
 
   const markerPosition = {
     lat: 0.467818, lng: 35.373523
-    // lat: parseFloat(apartment.center_latitude),
-    // lng: parseFloat(apartment.center_longitude),
+    // lat: parseFloat(item.center_latitude),
+    // lng: parseFloat(item.center_longitude),
   };
   
   
@@ -22,7 +22,7 @@ const ApartmentDetail = ({ apartment }) => {
     email: "info@eugenelands.co.ke",
     // licenseNumber: "License #KR.2023456",
   };
-//   const apartment = 
+//   const item = 
 //     {
 //       id: 3,
 //       name: "Luxurious Penthouse with a View",
@@ -34,7 +34,7 @@ const ApartmentDetail = ({ apartment }) => {
 //       size: "2,500 sqft",
 //     };
 
-  console.log(apartment)
+  console.log(item)
 
 
   return (
@@ -50,7 +50,7 @@ const ApartmentDetail = ({ apartment }) => {
               {/* Property Info - Price and Icons */}
               <div className="property-info-price-and-icons">
                 <span className="property-info-price" id="price">
-                  KES {apartment.cash_price}
+                  KES {item.cash_price}
                 </span>
                 {/* Rest of the property info icons/buttons */}
               </div>
@@ -62,14 +62,14 @@ const ApartmentDetail = ({ apartment }) => {
 
               <div className="property-info-address-and-media-types">
                 <div className="property-info-address">
-                  <h1 className="property-info-address-main">{apartment.county}</h1>
+                  <h1 className="property-info-address-main">{item.county}</h1>
                   <span className="property-info-address-citystatezip">
                     <a
                       className="standard-link text-only"
                       href="/las-vegas-nv/"
                       title="Las Vegas Homes For Sale"
                     >
-                      {apartment.county}
+                      {item.county}
                     </a>{" "}
                     <a
                       className="standard-link text-only"
@@ -87,7 +87,7 @@ const ApartmentDetail = ({ apartment }) => {
                       href="/las-vegas-nv/neighborhood/desert-shores/"
                       title="Desert Shores"
                     >
-                      {apartment.specific_location}
+                      {item.specific_location}
                     </a>
                   </span>
                 </div>
@@ -101,7 +101,7 @@ const ApartmentDetail = ({ apartment }) => {
                 >
                   <Marker
                     position={markerPosition}
-                    title={apartment.name}
+                    title={item.name}
                     icon={{
                       url: "http://maps.google.com/mapfiles/ms/icons/yellow-dot.png",
                     }}
@@ -139,7 +139,7 @@ aria-label="Property Description"
   </h2>
   <div className="ldp-description-text-container truncate-container">
     <p id="ldp-description-text" className="ldp-description-text">
-      {apartment.content}
+      {item.content}
     </p>
   </div>
 </div>
@@ -154,8 +154,8 @@ aria-label="Property Description"
 
 <div className="property-image" style={{ width: "100%", height: "400px", overflow: "hidden" }}>
   <img
-    src={apartment.image}
-    alt={apartment.title}
+    src={item.image}
+    alt={item.title}
     style={{ width: "100%", height: "100%", objectFit: "cover" }}
   />
 </div>
