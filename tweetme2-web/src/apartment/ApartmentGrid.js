@@ -52,7 +52,7 @@ const scrollToTop = () => {
     }
   };
   const handleLink = (item) => {
-    // Check if the item object exists and has the 'id' property
+    // Check if the apartment object exists and has the 'id' property
     if (item && item.id) {
       // Use window.location.href to navigate to the detail page
       window.location.href = `/apartment/${item.id}`;
@@ -80,7 +80,7 @@ const startIndex = (currentPage - 1) * itemsPerPage;
           }}
           onClick={() => handleLink(item)}
         >
-          <ApartmentItem item={item}/> {/* Use "apartment" instead of "house" */}
+          <ApartmentItem apartment={item}/> {/* Use "apartment" instead of "house" */}
         </div>
       ))}
     </div>
