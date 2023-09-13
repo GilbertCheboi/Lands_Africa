@@ -51,11 +51,11 @@ const scrollToTop = () => {
       scrollToTop(); // Scroll to the top
     }
   };
-  const handleLink = (apartment) => {
+  const handleLink = (item) => {
     // Check if the apartment object exists and has the 'id' property
-    if (apartment && apartment.id) {
+    if (item && item.id) {
       // Use window.location.href to navigate to the detail page
-      window.location.href = `/Apartment/${apartment.id}`;
+      window.location.href = `/apartment/${item.id}`;
     } else {
       console.error('Item data is missing or invalid.');
     }
@@ -78,8 +78,9 @@ const startIndex = (currentPage - 1) * itemsPerPage;
             textDecoration: 'none',
             color: 'inherit',
           }}
+          onClick={() => handleLink(item)}
         >
-          <ApartmentItem apartment={item}  onClick={() => handleLink(item)}/> {/* Use "apartment" instead of "house" */}
+          <ApartmentItem apartment={item}/> {/* Use "apartment" instead of "house" */}
         </div>
       ))}
     </div>
