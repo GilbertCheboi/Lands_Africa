@@ -31,7 +31,7 @@ const ApartmentGrid = () => {
         // Handle any errors here
         console.error(error);
       });
-  }, []); // Empty dependency array means this effect runs once, similar to componentDidMount
+  }, [apartment]); // Empty dependency array means this effect runs once, similar to componentDidMount
 
   const totalPages = Math.ceil(apartment.length / itemsPerPage);
 
@@ -78,7 +78,7 @@ const startIndex = (currentPage - 1) * itemsPerPage;
             textDecoration: 'none',
             color: 'inherit',
           }}
-          onClick={() => handleLink(item)}
+          onClick={() => handleLink(item.id)}
         >
           <ApartmentItem apartment={item}/> {/* Use "apartment" instead of "house" */}
         </div>
