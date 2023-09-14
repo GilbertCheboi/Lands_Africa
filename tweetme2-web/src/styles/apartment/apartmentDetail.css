@@ -46,7 +46,7 @@ body {
 
 /* Style the image gallery using CSS Grid */
 .image-gallery {
-  max-height: 200px; /* Set maximum height */
+  /* max-height: 200px; Set maximum height */
   width: 100%;
   overflow: auto; /* Enable scrolling if necessary */
 }

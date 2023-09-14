@@ -3,12 +3,22 @@ import './../styles/apartment/apartmentDetail.css';
 import { GoogleMap, Marker, LoadScript } from "@react-google-maps/api";
 import Header from '../land/Header';
 import Footer from '../land/Footer';
+import { Gallery } from "react-grid-gallery";
+
+// import image1 from '../assets/home.jpeg';
+// import image2 from '../assets/tom.jpeg';
+// import image3 from '../assets/veg.jpg';
+// import image4 from '../assets/vegt.jpg';
+// import image5 from '../assets/tom.jpeg';
+// import image6 from '../assets/veg.jpg';
+// import image7 from '../assets/vegt.jpg';
 
 const ApartmentDetail = () => {
   const url = window.location.href;
   const apartmentId = url.substring(url.lastIndexOf('/') + 1);
 
   const [apartmentData, setApartmentData] = useState(null);
+  const [images, setImages] = useState([]); // Define images and setImages states
 
   const fetchDetails = async () => {
     try {
@@ -42,23 +52,67 @@ const ApartmentDetail = () => {
     width: "100%",
   };
 
+  const imagesDataArray = Object.entries(apartmentData)
+.filter(([key, value]) => key.startsWith("image") && value !== null)
+.map(([key, value], index) => ({
+  src: value,
+  alt: `Apartment Image ${index}`,
+  isSelected: false,
+}));
+
+const handleSelect = (index, item, event) => {
+  const nextImages = images.map((image, i) =>
+    i === index ? { ...image, isSelected: !image.isSelected } : image
+  );
+  setImages(nextImages);
+};
+
+// const imagesDataArray = [
+//   {
+//     src: image1,
+//     alt: "Image 1",
+//     isSelected: false,
+//   },
+//   {
+//     src: image2,
+//     alt: "Image 2",
+//     isSelected: false,
+//   },
+//   {
+//     src: image3,
+//     alt: "Image 3",
+//     isSelected: false,
+//   },
+//   {
+//     src: image4,
+//     alt: "Image 4",
+//     isSelected: false,
+//   },
+//   {
+//     src: image5,
+//     alt: "Image 5",
+//     isSelected: false,
+//   },
+//   {
+//     src: image6,
+//     alt: "Image 6",
+//     isSelected: false,
+//   },
+//   {
+//     src: image7,
+//     alt: "Image 7",
+//     isSelected: false,
+//   },
+//   // Add more images as needed
+// ];
+
   return (
     <div>
       <Header/>
     <div className="apartment-detail-container">
-      <div className="image-gallery">
-        {/* Implement your image gallery or slideshow here */}
-        <img src={apartmentData.image} alt="Apartment" />
-        <img src={apartmentData.image1} alt="Apartment" />
-        <img src={apartmentData.image2} alt="Apartment" />
-        <img src={apartmentData.image3} alt="Apartment" />
-        <img src={apartmentData.image4} alt="Apartment" />
-        <img src={apartmentData.image5} alt="Apartment" />
-        <img src={apartmentData.image6} alt="Apartment" />
-        <img src={apartmentData.image7} alt="Apartment" />
-        <img src={apartmentData.image8} alt="Apartment" />
-        {/* You can add more images from apartmentData.image1, apartmentData.image2, etc. */}
-      </div>
+    <div className="image-gallery">
+      <Gallery images={imagesDataArray} onSelect={handleSelect} />
+    </div>
       <div className="apartment-details-box">
       <div className="apartment-details">
         <div className='apartment-top'>
