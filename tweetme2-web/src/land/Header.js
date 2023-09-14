@@ -15,8 +15,8 @@ const Header = () => {
       <div className={`nav-items ${isActive ? 'active' : ''}`}>
         <li><a href="/">Home</a></li>
         <li><a href="/About/">About</a></li>
-        <li><a href="/login/">Apartments</a></li>
-        <li><a href="/login/">Lands</a></li>
+        <li><a href="/apartments/">Apartments</a></li>
+        <li><a href="/Land/">Lands</a></li>
         <li><a href="/Contact/">Contact</a></li>
         <li><a href="/login/">Login</a></li>
         <li><a href="/register/">Register</a></li>
