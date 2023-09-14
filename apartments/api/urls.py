@@ -17,7 +17,7 @@ urlpatterns = [
     path('feed/', apartment_feed_view),
     path('action/', apartment_action_view),
     path('create/', apartment_create_view),
-    path('<int:land_id>/', apartment_detail_view),
+    path('<int:apartment_id>/', apartment_detail_view),
     path('<int:tweet_id>/delete/', apartment_delete_view),
     path('commentweet/', comment_apartment_view),
     path('tweetcomments/<int:id>/', see_all_apartment_comments),
