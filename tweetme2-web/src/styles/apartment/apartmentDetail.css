@@ -1,191 +1,205 @@
+/* Reset some default styles and apply a base font size */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  background-color: white;
+}
+/* body {
+  font-family: Arial, sans-serif;
+} */
 
 
-/* Main container styles */
-.main-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
+/* Define a container for the entire page */
+.apartment-detail-container {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Apartment Details Column (larger) */
+.apartment-details-box {
+  flex: 3; /* Occupy 75% of the page width */
+  padding: 20px;
+}
+
+/* Realtor Information Column (smaller) */
+.realtor-information {
+  flex: 1; /* Occupy 25% of the page width */
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  margin-left: 20px;
+  height: 300px;
+  background-color: #f8f8f8;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1)
+}
+
+/* Apartment Details Column */
+.apartment-details {
+  flex: 1; /* Occupy 50% of page width */
+  padding: 20px;
+}
+
+/* Style the image gallery using CSS Grid */
+.image-gallery {
+  max-height: 200px; /* Set maximum height */
+  width: 100%;
+  overflow: auto; /* Enable scrolling if necessary */
+}
+
+/* Add hover effect to gallery images */
+.image-gallery img {
+  width: 100%;
+  height: auto;
+  /* transition: transform 0.3s ease-in-out; */
+}
+
+.image-gallery img:hover {
+  transform: scale(1.1);
+}
+
+/* Style the apartment details section */
+.apartment-details h1 {
+  font-size: 24px;
+  margin: 0;
+}
+.apartment-top {
+  background-color: #f8f8f8;
+  padding: 20px;
+  margin-top: 30px;
+  border-radius: 8px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  border: 1px solid #ccc;
+}
+
+/* Style the icons using scalable vector icons (e.g., FontAwesome) */
+.icons {
+  display: flex;
+  align-items: center;
+}
+
+.icons span {
+  margin-right: 20px;
+}
+
+/* Style the apartment content container */
+.apartment-content-container {
+  background-color: #f8f8f8;
+  padding: 20px;
+  margin-top: 30px;
+  border-radius: 8px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  border: 1px solid #ccc;
+}
+
+.apartment-content-container h2 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: black;
+  font-weight: 600;
+}
+
+.apartment-content-text {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+/* Style the amenities section */
+.amenities {
+  background-color: #f8f8f8;
+  margin-top: 30px;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  border: 1px solid #ccc;
+}
+
+/* Style the amenities list using CSS Grid */
+.amenities-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Adjust column size as needed */
+  gap: 10px;
+  list-style: none;
+  padding: 0;
+}
+
+/* Style each amenity item */
+.amenity-item {
+  border: 1px solid #ccc; /* Add custom border styles */
+  border-radius: 8px; /* Rounded corners for a distinct look */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add box shadow for depth */
+  padding: 10px;
+  text-align: center;
+  font-size: 16px;
+  background-color: #ffffff; /* Background color for each item */
+}
+
+/* Add hover effect to amenity items */
+.amenity-item:hover {
+  transform: scale(1.05); /* Scale up on hover */
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2); /* Slightly larger shadow on hover */
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+.amenities h2 {
+  font-size: 20px;
+  font-weight: 600;
+
+}
+
+.amenities ul {
+  list-style: none;
+  padding: 0;
+}
+
+.amenities li {
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+/* Style the Google Map */
+.google-map h2 {
+  font-size: 20px;
+  font-weight: 600;
+  padding: 10px 0px 0px 20px;
+
+
+}
+.google-map {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-top: 30px;
+  background-color: #f8f8f8;
+
+}
+
+/* Realtor Information Column */
+.realtor-information {
+  flex: 1; /* Occupy 25% of page width */
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  margin-left: 20px;
+}
+
+.realtor-information h2 {
+  font-size: 20px;
+  margin: 0;
+}
+
+/* Media queries for responsiveness */
+@media screen and (max-width: 768px) {
+  .apartment-details-box,
+  .realtor-information {
+    flex: 100%; /* Stacking columns vertically on smaller screens */
+    margin-left: 0;
   }
-  
-  .ldp-grid-container {
-    display: flex;
-    justify-content: space-between;
-    max-width: 1200px;
-    width: 100%;
-    margin-top: 20px;
+
+  .image-gallery {
+    max-height: none; /* Remove maximum height */
   }
-  
-  .profile-column-left,
-  .profile-column-right {
-    flex: 1;
-    padding: 10px;
-  }
-  
-  /* Property Info styles */
-  .property-info-price-and-icons {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-size: 24px;
-    font-weight: bold;
-    margin-bottom: 10px;
-  }
-  
-  .property-info-price {
-    color: #ff9900; /* Orange color for price */
-  }
-  
-  .property-info-status-pill-container {
-    /* Add styles for property status pill if needed */
-  }
-  
-  .property-info-address-and-media-types {
-    margin-bottom: 20px;
-  }
-  
-  .property-info-address-main {
-    font-size: 24px;
-    font-weight: bold;
-    margin-bottom: 5px;
-  }
-  
-  .property-info-address-citystatezip {
-    font-size: 16px;
-  }
-  
-  .property-info-neighborhood {
-    font-size: 16px;
-  }
-  
-  /* Property Features styles */
-  .property-info-features {
-    display: flex;
-    align-items: center;
-    font-size: 16px;
-    margin-top: 10px;
-  }
-  
-  .feature-lotsize {
-    font-weight: bold;
-  }
-  
-  .divider {
-    margin: 0 10px;
-    font-weight: bold;
-  }
-  
-  /* Description styles */
-  .ldp-description-container {
-    margin-top: 20px;
-  }
-  
-  .ldp-description-heading {
-    font-size: 24px;
-    font-weight: bold;
-    margin-bottom: 10px;
-  }
-  
-  .ldp-description-text-container {
-    max-height: 200px; /* Adjust as needed */
-    overflow: hidden;
-  }
-  
-  .ldp-description-text {
-    font-size: 16px;
-  }
-  
-  /* Property Image styles */
-  .property-image {
-    margin-top: 20px;
-    max-height: 400px; /* Adjust as needed */
-    overflow: hidden;
-  }
-  
-  /* Agent Information styles */
-  .agent-information-wrapper {
-    margin-top: 20px;
-  }
-  
-  .listing-agent-title {
-    font-size: 20px;
-    font-weight: bold;
-    margin-bottom: 10px;
-  }
-  
-  .agent-information-fullname {
-    font-size: 16px;
-    font-weight: bold;
-    text-decoration: underline;
-    color: #007bff; /* Blue color for links */
-  }
-  
-  .agent-information-container {
-    font-size: 16px;
-    margin-bottom: 5px;
-  }
-  
-  .agent-information-agency-name {
-    font-weight: bold;
-  }
-  
-  .agent-information-phone-number,
-  .agent-information-email {
-    color: #007bff; /* Blue color for links */
-  }
-  
-  .agent-information-license-number {
-    font-size: 16px;
-    font-weight: bold;
-    margin-top: 5px;
-  }
-  
-  /* Realtor Information Box styles */
-  .realtor-info-box {
-    margin-top: 20px;
-    padding: 20px;
-    background-color: #f8f9fa; /* Light gray background */
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  }
-  
-  .agent-avatar img {
-    width: 100px; /* Adjust as needed */
-    height: 100px; /* Adjust as needed */
-    object-fit: cover;
-    border-radius: 50%;
-  }
-  
-  .agent-details {
-    margin-left: 20px;
-  }
-  
-  .agent-name {
-    font-size: 20px;
-    font-weight: bold;
-  }
-  
-  .agent-description {
-    margin-top: 10px;
-    font-size: 16px;
-  }
-  
-  .agent-contacts {
-    margin-top: 10px;
-    font-weight: bold;
-  }
-  
-  .call-button {
-    margin-left: 10px;
-    padding: 5px 10px;
-    background-color: #007bff; /* Blue color for button */
-    color: #fff; /* White text color */
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  .call-button:hover {
-    background-color: #0056b3; /* Darker blue color on hover */
-  }
-  
+}
